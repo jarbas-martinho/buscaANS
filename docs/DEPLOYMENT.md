@@ -29,10 +29,11 @@ Para usar no Actions, definir em Settings > Secrets and variables > Actions > Va
    `https://feeds.feedburner.com/gov/NUXu` por `https://jarbas-martinho.github.io/buscaANS/feed.xml`.
 3. Manter "Propriedade de data: PublishDate", a condição e a ação "Criar item".
 4. Salvar. O primeiro aviso chegará com a próxima legislação detectada (os atos já existentes no feed
-   estão datados pelo DOU, anteriores à troca, e não disparam o fluxo).
+   estão datados pelo DOU, anteriores à troca, e normalmente não disparam o fluxo; no pior caso,
+   os itens atuais do feed entram uma única vez na lista).
 
 Observação: a coluna DataPublicação passa a receber o momento em que o coletor detectou o ato
-(até ~30 minutos após o cadastro no portal). A data do DOU fica no início da descrição.
+(até ~45 minutos após o cadastro no portal: agendamento de 30 min, atrasos do GitHub e cache de 10 min do Pages). A data do DOU fica no início da descrição.
 
 ## Operação
 - Execução manual: aba Actions > "Coletar legislações da ANS" > Run workflow, ou `gh workflow run coletar.yml`.

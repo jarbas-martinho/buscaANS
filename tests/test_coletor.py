@@ -142,3 +142,14 @@ def test_estado_poda_os_mais_antigos():
 def test_feed_vazio_valido():
     texto = feed.montar([], config.carregar()["feed"])
     assert ET.fromstring(texto.split("\n", 1)[1]).find("channel/title").text == "ANS: novas legislações"
+
+
+def test_ato_sem_autonumber_nao_trava_os_demais(cfg):
+    class ClienteComDefeito(ClienteFalso):
+        def autonumber(self, guid):
+            if guid == self.atos[0]["guid"]:
+                raise ErroANS("sem Autonumber")
+            return super().autonumber(guid)
+
+    atos = lista_real()
+    assert executar(cfg, cliente=ClienteComDefeito(atos)) == len(atos) - 1

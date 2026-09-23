@@ -24,7 +24,11 @@ def atualizar_estado(estado: Estado, atos: list[dict], cliente, cfg: dict, agora
     for ato in atos:
         if ato["guid"] in conhecidos:
             continue
-        num = cliente.autonumber(ato["guid"])
+        try:
+            num = cliente.autonumber(ato["guid"])
+        except ErroANS as e:  # um ato defeituoso não pode travar a coleta dos demais
+            log.warning("Ato ignorado nesta execução: %s", e)
+            continue
         if num in estado.itens:  # mesmo ato com guid diferente
             estado.itens[num]["guid"] = ato["guid"]
             continue
