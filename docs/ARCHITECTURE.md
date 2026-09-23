@@ -1,7 +1,7 @@
 # Arquitetura
 
 ```
-GitHub Actions (cron 30 min)
+GitHub Actions (cron 09h, 13h, 18h)
   └─ python -m buscaans
        ├─ ans_client  ── HTTP ──> componentes-portal.ans.gov.br (/index.html, page.xml, /xas/)
        ├─ normalizar / filtro
@@ -28,6 +28,8 @@ Power Automate: gatilho RSS ──────┘──> Criar item em lista Sha
 - **`queryId` descoberto a cada execução.** É um hash que muda quando a ANS publica nova versão do sistema. A página tem cinco grades equivalentes; o coletor tenta cada uma e, por último, a reserva da configuração.
 - **Chave do ato = `Autonumber`**, que também forma o link público `/link/legislacao/{Autonumber}`. O atributo `Url` do objeto aponta para domínio interno e não é usado.
 - **`pubDate` = momento da detecção.** O gatilho RSS do Power Automate só entrega itens com data posterior à última verificação; a ANS registra atos com `DataDOU` à meia-noite e às vezes com dias de atraso, então usar a data do DOU faria perder itens. A data do DOU vai na descrição e em `<category>`.
-- **Semeadura.** Na primeira execução (sem `estado.json`) os atos recebem `pubDate` = data do DOU, para não gerar avisos em massa.
+- **Semeadura sem feed.** Na primeira execução (sem `estado.json`) todos os atos lidos são marcados `pre_existente` e ficam fora do feed. Assim o feed só contém atos detectados depois da implantação, e o Power Automate não tem o que recriar, qualquer que seja o comportamento do gatilho na primeira leitura.
+- **Reenvio controlado.** `--reenviar` (ou o campo "reenviar" da execução manual do workflow) remove atos do estado; na leitura seguinte entram no feed com data atual. Serve para entregar um ato pendente ou repetir um aviso.
+- **Frequência de três execuções diárias.** A ANS publica poucos atos por semana; mais frequência não traz ganho e aumenta a carga no portal.
 - **Leitura dos N mais recentes, sem paginação por deslocamento**, porque inserções deslocam as páginas.
 - **Arquivos só são regravados quando o conteúdo muda** (`lastBuildDate` = última novidade), evitando commits vazios.

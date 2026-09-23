@@ -1,7 +1,8 @@
 # Implantação e operação
 
 ## Onde roda
-- **GitHub Actions**: `.github/workflows/coletar.yml`, a cada 30 minutos (UTC) e sob demanda (`workflow_dispatch`).
+- **GitHub Actions**: `.github/workflows/coletar.yml`, às 09h, 13h e 18h de Brasília (cron `0 12,16,21 * * *`, em UTC) e sob demanda (`workflow_dispatch`, com o campo opcional "reenviar").
+  Para mudar os horários, editar a linha `cron` do workflow.
   Instala, roda os testes, coleta e commita `data/` e `docs/` somente se algo mudou.
 - **GitHub Pages**: branch `main`, pasta `/docs` (com `.nojekyll`). Feed em `https://jarbas-martinho.github.io/buscaANS/feed.xml`.
 - O repositório é público (exigência do Pages gratuito). Não há segredos: só dados públicos da ANS.
@@ -24,19 +25,25 @@ Qualquer chave de `config/defaults.toml` como `BUSCAANS_<SECAO>_<CHAVE>`. Exempl
 Para usar no Actions, definir em Settings > Secrets and variables > Actions > Variables e repassar no passo "Coletar" (`env:`).
 
 ## Trocar a origem no Power Automate
+O feed foi implantado **vazio**: os 40 atos já existentes estão marcados como pré-existentes, então
+o Power Automate não tem nada para recriar. A RN 680 (Autonumber 23651), pendente no fluxo antigo,
+é entregue por reenvio depois da troca.
+
 1. Abrir o fluxo de coleta.
 2. No gatilho RSS "Quando um item de feed é publicado", trocar a URL do feed
    `https://feeds.feedburner.com/gov/NUXu` por `https://jarbas-martinho.github.io/buscaANS/feed.xml`.
-3. Manter "Propriedade de data: PublishDate", a condição e a ação "Criar item".
-4. Salvar. O primeiro aviso chegará com a próxima legislação detectada (os atos já existentes no feed
-   estão datados pelo DOU, anteriores à troca, e normalmente não disparam o fluxo; no pior caso,
-   os itens atuais do feed entram uma única vez na lista).
+3. Manter "Propriedade de data: PublishDate", a condição e a ação "Criar item". Salvar.
+4. Esperar alguns minutos para o gatilho fazer a primeira leitura (feed vazio).
+5. No GitHub: Actions > "Coletar legislações da ANS" > Run workflow, preencher "reenviar" com `23651`
+   e executar (ou `gh workflow run coletar.yml -f reenviar=23651`).
+6. Em até ~10 minutos (cache do Pages) a RN 680 chega à lista e ao Teams.
 
 Observação: a coluna DataPublicação passa a receber o momento em que o coletor detectou o ato
-(até ~45 minutos após o cadastro no portal: agendamento de 30 min, atrasos do GitHub e cache de 10 min do Pages). A data do DOU fica no início da descrição.
+(até algumas horas depois do cadastro no portal, conforme o próximo horário agendado).
+A data do DOU fica no início da descrição.
 
 ## Operação
 - Execução manual: aba Actions > "Coletar legislações da ANS" > Run workflow, ou `gh workflow run coletar.yml`.
 - Falhas: o GitHub envia e-mail ao dono do repositório quando o workflow falha. O feed anterior permanece publicado.
-- Reprocessar do zero: apagar `data/estado.json` e `docs/feed.xml` e executar; ocorre nova semeadura sem disparar avisos.
-- Forçar reenvio de um ato: remover a entrada dele de `data/estado.json`; na próxima execução ele volta ao feed com data atual.
+- Reprocessar do zero: apagar `data/estado.json` e `docs/feed.xml` e executar; ocorre nova semeadura com feed vazio, sem disparar avisos.
+- Reenviar um ato: Run workflow com "reenviar" = Autonumber (o número final do link `/link/legislacao/{n}`). O ato precisa estar entre os 40 mais recentes do portal.

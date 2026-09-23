@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import logging
 import sys
 from datetime import datetime, timezone
@@ -33,8 +34,6 @@ def atualizar_estado(estado: Estado, atos: list[dict], cliente, cfg: dict, agora
             estado.itens[num]["guid"] = ato["guid"]
             continue
         dou = data_dou(ato.get("DataDOU"), fuso)
-        # Na primeira execução, o ato é datado pelo DOU para o gatilho RSS não tratá-lo como novidade.
-        visto = dou if (estado.novo and dou) else agora
         titulo = ato.get("Titulo") or ""
         estado.itens[num] = {
             "guid": ato["guid"],
@@ -43,26 +42,42 @@ def atualizar_estado(estado: Estado, atos: list[dict], cliente, cfg: dict, agora
             "dou": dou.date().isoformat() if dou else None,
             "status": status_legivel(ato.get("Status")),
             "link": cliente.link(num),
-            "visto_em": visto.isoformat(timespec="seconds"),
+            "visto_em": agora.isoformat(timespec="seconds"),
             "excluido": excluido(titulo, cfg["coleta"]["tipos_excluidos"]),
+            # Na primeira execução, os atos já existem no SharePoint: ficam fora do feed para
+            # o Power Automate não recriá-los.
+            "pre_existente": estado.novo,
         }
         novos.append(num)
     return novos
 
 
+def reenviar(estado: Estado, numeros: list[str]) -> None:
+    """Remove atos do estado para que a próxima leitura os trate como novos (entram no feed com data atual)."""
+    for n in numeros:
+        if not n.isdigit():
+            raise ValueError(f"Autonumber inválido para reenvio: {n!r}")
+        if estado.itens.pop(n, None) is None:
+            log.warning("Reenvio: ato %s não consta do estado; será tratado como novo se estiver entre os lidos", n)
+        else:
+            log.info("Reenvio: ato %s removido do estado", n)
+
+
 def itens_do_feed(estado: Estado, quantidade: int) -> list[dict]:
-    validos = [(int(k), v) for k, v in estado.itens.items() if not v["excluido"]]
+    validos = [(int(k), v) for k, v in estado.itens.items()
+               if not v["excluido"] and not v.get("pre_existente")]
     validos.sort(key=lambda kv: (kv[1]["visto_em"], kv[1].get("dou") or "", kv[0]), reverse=True)
     return [v for _, v in validos[:quantidade]]
 
 
-def executar(cfg: dict, cliente=None, agora: datetime | None = None) -> int:
+def executar(cfg: dict, cliente=None, agora: datetime | None = None, reenviar_numeros: list[str] = ()) -> int:
     fuso = ZoneInfo(cfg["ans"]["fuso"])
     agora = (agora or datetime.now(timezone.utc)).astimezone(fuso)
     arq_estado = config.caminho(cfg["estado"]["arquivo"])
     arq_feed = config.caminho(cfg["feed"]["arquivo"])
 
     estado = Estado.ler(arq_estado)
+    reenviar(estado, list(reenviar_numeros))
     cliente = cliente or ClienteANS(cfg["ans"])
     try:
         cliente.abrir()
@@ -74,7 +89,8 @@ def executar(cfg: dict, cliente=None, agora: datetime | None = None) -> int:
 
     for n in novos:
         i = estado.itens[n]
-        log.info("%s %s | %s", "IGNORADO" if i["excluido"] else "NOVO", n, i["titulo"])
+        rotulo = "PRE-EXISTENTE" if i["pre_existente"] else "IGNORADO" if i["excluido"] else "NOVO"
+        log.info("%s %s | %s", rotulo, n, i["titulo"])
     estado.podar(cfg["estado"]["maximo"])
     mudou_estado = estado.gravar(arq_estado)
     mudou_feed = feed.gravar(feed.montar(itens_do_feed(estado, cfg["feed"]["itens"]), cfg["feed"]), arq_feed)
@@ -83,10 +99,15 @@ def executar(cfg: dict, cliente=None, agora: datetime | None = None) -> int:
     return len(novos)
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    p = argparse.ArgumentParser(prog="buscaans", description="Coleta novas legislações da ANS e gera o feed RSS.")
+    p.add_argument("--reenviar", default="",
+                   help="Autonumbers separados por vírgula que devem voltar ao feed como novos (ex.: 23651)")
+    args = p.parse_args(argv)
+    numeros = [n.strip() for n in args.reenviar.split(",") if n.strip()]
     try:
-        executar(config.carregar())
+        executar(config.carregar(), reenviar_numeros=numeros)
     except (ErroANS, OSError, ValueError) as e:
         log.error("Falha na coleta: %s", e)
         return 1

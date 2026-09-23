@@ -14,8 +14,9 @@
 | `dou` | data ISO (`AAAA-MM-DD`) ou nulo | Data de publicação no DOU, fuso de São Paulo |
 | `status` | texto | Situação exibida no portal ("Vigente", "Não vigente", ...) |
 | `link` | URL | `https://componentes-portal.ans.gov.br/link/legislacao/{Autonumber}` |
-| `visto_em` | data e hora ISO com fuso | Momento da detecção (na semeadura, meia-noite da data do DOU); vira o `pubDate` do feed |
+| `visto_em` | data e hora ISO com fuso | Momento da detecção; vira o `pubDate` do feed |
 | `excluido` | booleano | `true` se o tipo do ato está em `coleta.tipos_excluidos` (fica fora do feed) |
+| `pre_existente` | booleano | `true` se o ato já existia na implantação (semeadura); fica fora do feed para não ser recriado no SharePoint |
 
 Poda: mantém no máximo `estado.maximo` registros (padrão 2000), descartando os de DOU mais antigo.
 

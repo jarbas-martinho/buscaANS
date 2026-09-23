@@ -93,20 +93,34 @@ def test_filtro_por_tipo(titulo, esperado):
     assert excluido(titulo, TIPOS) is esperado
 
 
-def test_primeira_execucao_semeia_com_data_do_dou(cfg):
+def test_primeira_execucao_registra_tudo_como_pre_existente_e_feed_vazio(cfg):
     cli = ClienteFalso(lista_real())
-    agora = datetime(2026, 9, 23, 18, 0, tzinfo=timezone.utc)
-    novos = executar(cfg, cliente=cli, agora=agora)
+    novos = executar(cfg, cliente=cli, agora=datetime(2026, 9, 23, 18, 0, tzinfo=timezone.utc))
     assert novos == len(lista_real())
+    assert itens_feed(cfg) == []  # nada que o Power Automate possa recriar
+    estado = json.loads(Path(cfg["estado"]["arquivo"]).read_text(encoding="utf-8"))["itens"]
+    assert all(v["pre_existente"] for v in estado.values())
+
+
+def test_reenviar_devolve_ato_ao_feed_com_data_atual(cfg):
+    atos = lista_real()
+    executar(cfg, cliente=ClienteFalso(atos))
+    rn = next(a for a in atos if a["Titulo"].startswith("Resolução Normativa - RN ANS nº 680"))
+    num = str(int(rn["guid"][-6:]))
+    agora = datetime(2026, 9, 24, 12, 0, tzinfo=timezone.utc)
+    assert executar(cfg, cliente=ClienteFalso(atos), agora=agora, reenviar_numeros=[num]) == 1
     itens = itens_feed(cfg)
-    titulos = [i.findtext("title") for i in itens]
-    assert any(t.startswith("Resolução Normativa - RN ANS nº 680") for t in titulos)
-    assert not any(t.startswith("Resolução Operacional") for t in titulos)
-    # semeadura: pubDate = data do DOU (meia-noite), nunca o momento da execução
-    assert all("00:00:00 -0300" in i.findtext("pubDate") for i in itens)
-    rn680 = next(i for i in itens if "RN ANS nº 680" in i.findtext("title"))
+    assert len(itens) == 1
+    rn680 = itens[0]
+    assert "RN ANS nº 680" in rn680.findtext("title")
+    assert rn680.findtext("pubDate") == "Thu, 24 Sep 2026 09:00:00 -0300"
     assert rn680.findtext("description").startswith("Publicado no DOU em 22/09/2026. Altera o Anexo I")
     assert rn680.findtext("link") == rn680.findtext("guid")
+
+
+def test_reenviar_rejeita_valor_invalido(cfg):
+    with pytest.raises(ValueError):
+        executar(cfg, cliente=ClienteFalso(lista_real()), reenviar_numeros=["23651; rm -rf"])
 
 
 def test_segunda_execucao_sem_novidade_nao_altera_arquivos(cfg):

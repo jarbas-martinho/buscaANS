@@ -9,7 +9,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/11823",
    "visto_em": "2026-06-30T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "11892": {
    "guid": "103301316454358138",
@@ -19,7 +20,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/11892",
    "visto_em": "2026-07-22T00:00:00-03:00",
-   "excluido": false
+   "excluido": false,
+   "pre_existente": true
   },
   "11917": {
    "guid": "103301316454361325",
@@ -29,7 +31,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/11917",
    "visto_em": "2026-06-30T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "11928": {
    "guid": "103301316454362669",
@@ -39,7 +42,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/11928",
    "visto_em": "2026-07-22T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "11966": {
    "guid": "103301316454367587",
@@ -49,7 +53,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/11966",
    "visto_em": "2026-07-01T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12043": {
    "guid": "103301316454377362",
@@ -59,7 +64,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12043",
    "visto_em": "2026-06-11T00:00:00-03:00",
-   "excluido": false
+   "excluido": false,
+   "pre_existente": true
   },
   "12211": {
    "guid": "103301316454398891",
@@ -69,7 +75,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12211",
    "visto_em": "2026-06-30T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12251": {
    "guid": "103301316454404000",
@@ -79,7 +86,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12251",
    "visto_em": "2026-06-30T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12287": {
    "guid": "103301316454408658",
@@ -89,7 +97,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12287",
    "visto_em": "2026-06-30T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12429": {
    "guid": "103301316454426875",
@@ -99,7 +108,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12429",
    "visto_em": "2026-06-10T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12434": {
    "guid": "103301316454427450",
@@ -109,7 +119,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12434",
    "visto_em": "2026-06-30T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12517": {
    "guid": "103301316454438061",
@@ -119,7 +130,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12517",
    "visto_em": "2026-07-22T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12554": {
    "guid": "103301316454442819",
@@ -129,7 +141,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12554",
    "visto_em": "2026-06-11T00:00:00-03:00",
-   "excluido": false
+   "excluido": false,
+   "pre_existente": true
   },
   "12593": {
    "guid": "103301316454447757",
@@ -139,7 +152,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12593",
    "visto_em": "2026-08-10T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12651": {
    "guid": "103301316454455204",
@@ -149,7 +163,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12651",
    "visto_em": "2026-07-21T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "12884": {
    "guid": "103301316454485006",
@@ -159,7 +174,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12884",
    "visto_em": "2026-07-21T00:00:00-03:00",
-   "excluido": false
+   "excluido": false,
+   "pre_existente": true
   },
   "12953": {
    "guid": "103301316454493843",
@@ -169,7 +185,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/12953",
    "visto_em": "2026-07-21T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "13030": {
    "guid": "103301316454503730",
@@ -179,7 +196,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/13030",
    "visto_em": "2026-07-22T00:00:00-03:00",
-   "excluido": false
+   "excluido": false,
+   "pre_existente": true
   },
   "13395": {
    "guid": "103301316454550515",
@@ -189,7 +207,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/13395",
    "visto_em": "2026-07-21T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "13633": {
    "guid": "103301316454580981",
@@ -199,7 +218,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/13633",
    "visto_em": "2026-07-03T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "14003": {
    "guid": "103301316454628333",
@@ -209,7 +229,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/14003",
    "visto_em": "2026-07-21T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15325": {
    "guid": "103301316454797468",
@@ -219,7 +240,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15325",
    "visto_em": "2026-07-03T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15530": {
    "guid": "103301316454823737",
@@ -229,7 +251,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15530",
    "visto_em": "2026-07-03T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15572": {
    "guid": "103301316454829140",
@@ -239,7 +262,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15572",
    "visto_em": "2026-07-21T00:00:00-03:00",
-   "excluido": false
+   "excluido": false,
+   "pre_existente": true
   },
   "15691": {
    "guid": "103301316454861732",
@@ -249,7 +273,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15691",
    "visto_em": "2026-08-27T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15692": {
    "guid": "103301316454861946",
@@ -259,7 +284,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15692",
    "visto_em": "2026-08-27T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15694": {
    "guid": "103301316454862196",
@@ -269,7 +295,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15694",
    "visto_em": "2026-08-27T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15695": {
    "guid": "103301316454862330",
@@ -279,7 +306,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15695",
    "visto_em": "2026-08-27T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15696": {
    "guid": "103301316454862362",
@@ -289,7 +317,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15696",
    "visto_em": "2026-08-27T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15697": {
    "guid": "103301316454862492",
@@ -299,7 +328,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15697",
    "visto_em": "2026-08-27T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15698": {
    "guid": "103301316454862674",
@@ -309,7 +339,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15698",
    "visto_em": "2026-08-27T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15699": {
    "guid": "103301316454862772",
@@ -319,7 +350,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15699",
    "visto_em": "2026-08-28T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "15702": {
    "guid": "103301316454871637",
@@ -329,7 +361,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/15702",
    "visto_em": "2026-08-28T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "19763": {
    "guid": "103301316455463802",
@@ -339,7 +372,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/19763",
    "visto_em": "2026-09-09T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "21753": {
    "guid": "103301316455723648",
@@ -349,7 +383,8 @@
    "status": "Não vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/21753",
    "visto_em": "2026-09-14T00:00:00-03:00",
-   "excluido": false
+   "excluido": false,
+   "pre_existente": true
   },
   "23651": {
    "guid": "103301316456072334",
@@ -359,7 +394,8 @@
    "status": "Não vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/23651",
    "visto_em": "2026-09-22T00:00:00-03:00",
-   "excluido": false
+   "excluido": false,
+   "pre_existente": true
   },
   "23652": {
    "guid": "103301316456072516",
@@ -369,7 +405,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/23652",
    "visto_em": "2026-09-22T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "23653": {
    "guid": "103301316456072666",
@@ -379,7 +416,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/23653",
    "visto_em": "2026-09-22T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "23661": {
    "guid": "103301316456073719",
@@ -389,7 +427,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/23661",
    "visto_em": "2026-09-22T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   },
   "24383": {
    "guid": "103301316456166135",
@@ -399,7 +438,8 @@
    "status": "Vigente",
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/24383",
    "visto_em": "2026-09-23T00:00:00-03:00",
-   "excluido": true
+   "excluido": true,
+   "pre_existente": true
   }
  }
 }

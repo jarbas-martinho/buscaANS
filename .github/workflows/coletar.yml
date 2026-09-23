@@ -2,8 +2,14 @@ name: Coletar legislações da ANS
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # a cada 30 minutos (UTC); o GitHub pode atrasar alguns minutos
+    # 09h, 13h e 18h de Brasília (12h, 16h e 21h UTC); o GitHub pode atrasar alguns minutos
+    - cron: "0 12,16,21 * * *"
   workflow_dispatch:
+    inputs:
+      reenviar:
+        description: "Autonumbers que devem voltar ao feed como novos, separados por vírgula (ex.: 23651)"
+        required: false
+        default: ""
 
 concurrency:
   group: coletar
@@ -33,7 +39,9 @@ jobs:
         run: pytest -q
 
       - name: Coletar
-        run: python -m buscaans
+        env:
+          REENVIAR: ${{ inputs.reenviar }}
+        run: python -m buscaans --reenviar "$REENVIAR"
 
       - name: Commitar novidades
         run: |
