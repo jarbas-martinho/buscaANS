@@ -1,0 +1,405 @@
+{
+ "versao": 1,
+ "itens": {
+  "11823": {
+   "guid": "103301316454349257",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3152, de 26 junho 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora UNIODONTO BELÉM - COOPERATIVA DE ASSISTÊNCIA À SAÚDE ODONTOLÓGICA.",
+   "dou": "2026-06-30",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11823",
+   "visto_em": "2026-06-30T00:00:00-03:00",
+   "excluido": true
+  },
+  "11892": {
+   "guid": "103301316454358138",
+   "titulo": "Instrução Normativa - IN DIPRO nº 61, de 21 julho 2026",
+   "ementa": "Altera a Instrução Normativa ANS nº 28, de 16 de dezembro de 2022, que dispõe sobre os procedimentos do Registro de Produtos.",
+   "dou": "2026-07-22",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11892",
+   "visto_em": "2026-07-22T00:00:00-03:00",
+   "excluido": false
+  },
+  "11917": {
+   "guid": "103301316454361325",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3149, de 26 junho 2026",
+   "ementa": "Dispõe sobre a decretação de liquidação extrajudicial da YOU ASSISTÊNCIA MÉDICA LTDA.",
+   "dou": "2026-06-30",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11917",
+   "visto_em": "2026-06-30T00:00:00-03:00",
+   "excluido": true
+  },
+  "11928": {
+   "guid": "103301316454362669",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3158, de 21 julho 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora SANTO ANDRÉ PLANOS DE ASSISTENCIA MÉDICA LTDA.",
+   "dou": "2026-07-22",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11928",
+   "visto_em": "2026-07-22T00:00:00-03:00",
+   "excluido": true
+  },
+  "11966": {
+   "guid": "103301316454367587",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3153, de 30 junho 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora UNIMED OESTE DO PARÁ - COOPERATIVA DE TRABALHO MÉDICO.",
+   "dou": "2026-07-01",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11966",
+   "visto_em": "2026-07-01T00:00:00-03:00",
+   "excluido": true
+  },
+  "12043": {
+   "guid": "103301316454377362",
+   "titulo": "Resolução Normativa - RN ANS nº 675, de 10 junho 2026",
+   "ementa": "Altera o anexo II da Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para a atualização da Diretriz de Utilização - DUT nº 170 do anexo II da RN nº 465/2021, relacionada ao \"IMPLANTE SUBDÉRMICO HORMONAL PARA CONTRACEPÇÃO (COM DIRETRIZ DE UTILIZAÇÃO)\", para ampliar a cobertura assistencial do implante subdérmico de etonogestrel para prevenção da gravidez não desejada em adolescentes de 15 a 17 anos, em cumprimento ao disposto no art. 33 da RN nº 555/2022, ao art. 19T da Lei nº 8.080/1990, alterada pela Lei nº 14.313/2022, e aos parágrafos 4º e 10, do art. 10, da Lei nº 9.656/1998",
+   "dou": "2026-06-11",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12043",
+   "visto_em": "2026-06-11T00:00:00-03:00",
+   "excluido": false
+  },
+  "12211": {
+   "guid": "103301316454398891",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3150, de 26 junho 2026",
+   "ementa": "Dispõe sobre a comercialização de planos ou produtos da operadora PLANO SIGMA SAÚDE LTDA.",
+   "dou": "2026-06-30",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12211",
+   "visto_em": "2026-06-30T00:00:00-03:00",
+   "excluido": true
+  },
+  "12251": {
+   "guid": "103301316454404000",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3147, de 26 junho 2026",
+   "ementa": "Dispõe sobre a retificação do termo legal da liquidação extrajudicial da GOOD LIFE SAÚDE LTDA - EM LIQUIDAÇÃO EXTRAJUDICIAL.",
+   "dou": "2026-06-30",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12251",
+   "visto_em": "2026-06-30T00:00:00-03:00",
+   "excluido": true
+  },
+  "12287": {
+   "guid": "103301316454408658",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3151, de 26 junho 2026",
+   "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da operadora ATÍVIA SERVIÇOS DE SAÚDE S/A, Registro ANS nº 32.051-0.",
+   "dou": "2026-06-30",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12287",
+   "visto_em": "2026-06-30T00:00:00-03:00",
+   "excluido": true
+  },
+  "12429": {
+   "guid": "103301316454426875",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3139, de 08 junho 2026",
+   "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da operadora PLANODENTE LTDA, Registro ANS nº 41.651-7.",
+   "dou": "2026-06-10",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12429",
+   "visto_em": "2026-06-10T00:00:00-03:00",
+   "excluido": true
+  },
+  "12434": {
+   "guid": "103301316454427450",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3148, de 26 junho 2026",
+   "ementa": "Dispõe sobre a retificação do termo legal da liquidação extrajudicial da SEMPRE SAÚDE FAMÍLIA ADMINISTRADORA DE BENEFÍCIOS LTDA - EM LIQUIDAÇÃO EXTRAJUDICIAL.",
+   "dou": "2026-06-30",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12434",
+   "visto_em": "2026-06-30T00:00:00-03:00",
+   "excluido": true
+  },
+  "12517": {
+   "guid": "103301316454438061",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3159, de 21 julho 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora UNIMED NORTE/NORDESTE-FEDERAÇÃO INTERFEDERATIVA DAS SOCIEDADES COOPERATIVAS DE TRABALHO MÉDICO EM RECUPERAÇÃO JUDICIAL.",
+   "dou": "2026-07-22",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12517",
+   "visto_em": "2026-07-22T00:00:00-03:00",
+   "excluido": true
+  },
+  "12554": {
+   "guid": "103301316454442819",
+   "titulo": "Resolução Normativa - RN ANS nº 674, de 10 junho 2026",
+   "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a cobertura obrigatória do medicamento antineoplásico oral Acalabrutinibe, em combinação com venetoclax, para o tratamento de pacientes adultos com leucemia linfocítica crônica (LLC) ou linfoma linfocítico de pequenas células (LLPC) sem deleção 17p ou mutação TP53, em cumprimento ao disposto nos parágrafos 4º, 7º e 8º do art. 10, da Lei nº 9.656/1998.",
+   "dou": "2026-06-11",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12554",
+   "visto_em": "2026-06-11T00:00:00-03:00",
+   "excluido": false
+  },
+  "12593": {
+   "guid": "103301316454447757",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3160, de 07 agosto 2026",
+   "ementa": "Dispõe sobre a determinação da alienação da carteira da CEAM BRASIL - PLANOS DE SAÚDE LTDA.",
+   "dou": "2026-08-10",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12593",
+   "visto_em": "2026-08-10T00:00:00-03:00",
+   "excluido": true
+  },
+  "12651": {
+   "guid": "103301316454455204",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3154, de 17 julho 2026",
+   "ementa": "Dispõe sobre a determinação da alienação da carteira da INTERCLÍNICAS PLANO VIDA USA OPERADORA DE SAÚDE LTDA.",
+   "dou": "2026-07-21",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12651",
+   "visto_em": "2026-07-21T00:00:00-03:00",
+   "excluido": true
+  },
+  "12884": {
+   "guid": "103301316454485006",
+   "titulo": "Resolução Normativa - RN ANS nº 677, de 20 julho 2026",
+   "ementa": "Altera as Resolução Normativa ANS nº 585, de 18 de agosto de 2023, que dispõe sobre os critérios para as alterações na rede assistencial hospitalar no que se refere à substituição de entidade hospitalar e redimensionamento de rede por redução.",
+   "dou": "2026-07-21",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12884",
+   "visto_em": "2026-07-21T00:00:00-03:00",
+   "excluido": false
+  },
+  "12953": {
+   "guid": "103301316454493843",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3157, de 17 julho 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora AMEPLAN ASSISTÊNCIA MÉDICA PLANEJADA LTDA.",
+   "dou": "2026-07-21",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12953",
+   "visto_em": "2026-07-21T00:00:00-03:00",
+   "excluido": true
+  },
+  "13030": {
+   "guid": "103301316454503730",
+   "titulo": "Resolução Normativa - RN ANS nº 678, de 21 julho 2026",
+   "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a cobertura obrigatória do procedimento ablação percutânea por cateter de campo pulsado para o tratamento da fibrilação atrial paroxística, em cumprimento ao disposto nos parágrafos 4º, 7º e 8º do art. 10, da Lei nº 9.656/1998.",
+   "dou": "2026-07-22",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/13030",
+   "visto_em": "2026-07-22T00:00:00-03:00",
+   "excluido": false
+  },
+  "13395": {
+   "guid": "103301316454550515",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3155, de 17 julho 2026",
+   "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da BRASIL ODONTO OPERADORA DE PLANOS ODONTOLÓGICOS LTDA, Registro ANS nº 42.156-1.",
+   "dou": "2026-07-21",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/13395",
+   "visto_em": "2026-07-21T00:00:00-03:00",
+   "excluido": true
+  },
+  "13633": {
+   "guid": "103301316454580981",
+   "titulo": "Portaria - Portaria DIGES nº 1, de 03 julho 2026",
+   "ementa": "Dispõe sobre a aprovação do Manual de Utilização da Sala 360 e do Termo de Responsabilidade e Sigilo para uso da Sala 360, no âmbito da Agência Nacional de Saúde Suplementar – ANS.",
+   "dou": "2026-07-03",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/13633",
+   "visto_em": "2026-07-03T00:00:00-03:00",
+   "excluido": true
+  },
+  "14003": {
+   "guid": "103301316454628333",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3156, de 17 julho 2026",
+   "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da POLIMÉDICA SAÚDE SOCIEDADE SIMPLES LTDA, Registro ANS nº 31.690-3.",
+   "dou": "2026-07-21",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/14003",
+   "visto_em": "2026-07-21T00:00:00-03:00",
+   "excluido": true
+  },
+  "15325": {
+   "guid": "103301316454797468",
+   "titulo": "Portaria - Portaria PRESI nº 10, de 03 julho 2026",
+   "ementa": "Tornar pública a aprovação do Plano Diretor de Tecnologia da Informação e Comunicação - PDTIC da ANS, relativo aos anos de 2026 e 2027, apresentado e aprovado pela Diretoria Colegiada no Comitê de Governança, Riscos e Controles – CGRC no dia 27 de fevereiro de 2026.",
+   "dou": "2026-07-03",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15325",
+   "visto_em": "2026-07-03T00:00:00-03:00",
+   "excluido": true
+  },
+  "15530": {
+   "guid": "103301316454823737",
+   "titulo": "Portaria - Portaria PRESI nº 9, de 16 julho 2026",
+   "ementa": "Fica estabelecido o perfil profissional desejável dos cargos comissionados executivos - CCE e funções comissionadas executivas - FCE, de níveis 11 a 17, alocados na estrutura regimental da Agência Nacional de Saúde Suplementar - ANS, conforme consta dos Anexos desta portaria.",
+   "dou": "2026-07-03",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15530",
+   "visto_em": "2026-07-03T00:00:00-03:00",
+   "excluido": true
+  },
+  "15572": {
+   "guid": "103301316454829140",
+   "titulo": "Resolução Normativa - RN ANS nº 676, de 20 julho 2026",
+   "ementa": "Altera o anexo II da Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para a atualização da Diretriz de Utilização - DUT nº 158 do anexo II da RN nº 465/2021, relacionada ao \"TERAPIA MEDICAMENTOSA INJETÁVEL AMBULATORIAL (COM DIRETRIZ DE UTILIZAÇÃO)\", para assegurar a cobertura assistencial aos medicamentos Undecilato de testosterona; Cipionato de testosterona; e a combinação de quatro ésteres de testosterona (Propionato de testosterona, Fempropionato de testosterona, Isocaproato de testosterona e Decanoato de testosterona) para o tratamento de hipogonadismo hipogonadotrófico orgânico em homens adultos e em adolescentes do sexo masculino, em cumprimento ao disposto no art. 33 da RN nº 555/2022, ao art. 19T da Lei º 8.080/1990, alterada pela Lei nº 14.313/2022, e aos parágrafos 4º e 10, do art. 10, da Lei nº 9.656/1998.",
+   "dou": "2026-07-21",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15572",
+   "visto_em": "2026-07-21T00:00:00-03:00",
+   "excluido": false
+  },
+  "15691": {
+   "guid": "103301316454861732",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3161, de 26 agosto 2026",
+   "ementa": "Dispõe sobre a determinação da alienação da carteira da YOU ODONTO LTDA.",
+   "dou": "2026-08-27",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15691",
+   "visto_em": "2026-08-27T00:00:00-03:00",
+   "excluido": true
+  },
+  "15692": {
+   "guid": "103301316454861946",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3162, de 26 agosto 2026",
+   "ementa": "Dispõe sobre a determinação da alienação da carteira da SUL DO PARÁ SAÚDE LTDA.",
+   "dou": "2026-08-27",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15692",
+   "visto_em": "2026-08-27T00:00:00-03:00",
+   "excluido": true
+  },
+  "15694": {
+   "guid": "103301316454862196",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3163, de 26 agosto 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora AMESC - Associação Médica Espírita Cristã",
+   "dou": "2026-08-27",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15694",
+   "visto_em": "2026-08-27T00:00:00-03:00",
+   "excluido": true
+  },
+  "15695": {
+   "guid": "103301316454862330",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3164, de 26 agosto 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora FEDERAÇÃO DAS SOCIEDADES COOPERATIVAS DE TRABALHO MÉDICO DO ACRE, AMAPÁ, AMAZONAS, PARÁ, RONDONIA E RORAIMA.",
+   "dou": "2026-08-27",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15695",
+   "visto_em": "2026-08-27T00:00:00-03:00",
+   "excluido": true
+  },
+  "15696": {
+   "guid": "103301316454862362",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3165, de 26 agosto 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora UNIMED-RIO COOPERATIVA DE TRABALHO MÉDICO DO RIO DE JANEIRO.",
+   "dou": "2026-08-27",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15696",
+   "visto_em": "2026-08-27T00:00:00-03:00",
+   "excluido": true
+  },
+  "15697": {
+   "guid": "103301316454862492",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3166, de 26 agosto 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora UNIMED DE TAUBATÉ COOPERATIVA DE TRABALHO MÉDICO.",
+   "dou": "2026-08-27",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15697",
+   "visto_em": "2026-08-27T00:00:00-03:00",
+   "excluido": true
+  },
+  "15698": {
+   "guid": "103301316454862674",
+   "titulo": "Resolução Operacional - RO Diretoria Colegiada nº 3167, de 26 agosto 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora Unimed-São Gonçalo - Niterói - Sociedade Cooperativa Serviços Médicos e Hospitalares Ltda.",
+   "dou": "2026-08-27",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15698",
+   "visto_em": "2026-08-27T00:00:00-03:00",
+   "excluido": true
+  },
+  "15699": {
+   "guid": "103301316454862772",
+   "titulo": "Resolução Regimental  - RR ANS nº 38, de 27 agosto 2026",
+   "ementa": "Altera os Anexos I e I-d da Resolução Regimental nº 21, de 26 de janeiro de 2022, que dispõe sobre o Regimento Interno da Agência Nacional de Saúde Suplementar – ANS, na parte referente aos cargos da Diretoria de Desenvolvimento Setorial – DIDES.",
+   "dou": "2026-08-28",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15699",
+   "visto_em": "2026-08-28T00:00:00-03:00",
+   "excluido": true
+  },
+  "15702": {
+   "guid": "103301316454871637",
+   "titulo": "Resolução Operacional - RO ANS nº 3168, de 27 agosto 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora SELECT OPERADORA DE PLANO DE SAUDE LTDA.",
+   "dou": "2026-08-28",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15702",
+   "visto_em": "2026-08-28T00:00:00-03:00",
+   "excluido": true
+  },
+  "19763": {
+   "guid": "103301316455463802",
+   "titulo": "Resolução Operacional - RO ANS nº 3169, de 04 setembro 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora UNIMED DO EST. DO RJ FEDERAÇÃO EST. DAS COOPERATIVAS MÉDICAS.",
+   "dou": "2026-09-09",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/19763",
+   "visto_em": "2026-09-09T00:00:00-03:00",
+   "excluido": true
+  },
+  "21753": {
+   "guid": "103301316455723648",
+   "titulo": "Resolução Normativa - RN ANS nº 679, de 10 setembro 2026",
+   "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a ampliação da cobertura obrigatória do procedimento mamografia digital, de acordo com o art. 38 da Resolução Normativa 555/2022 e em cumprimento ao disposto no parágrafo 4º do art. 10, da Lei nº 9.656/1998.",
+   "dou": "2026-09-14",
+   "status": "Não vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/21753",
+   "visto_em": "2026-09-14T00:00:00-03:00",
+   "excluido": false
+  },
+  "23651": {
+   "guid": "103301316456072334",
+   "titulo": "Resolução Normativa - RN ANS nº 680, de 18 setembro 2026",
+   "ementa": "Altera o Anexo I da Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, para atualizar a descrição do procedimento IMPLANTE DE DISPOSITIVO/SISTEMA INTRAUTERINO (DIU/SIU) HORMONAL - INCLUI O DISPOSITIVO e altera o Anexo II da Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, para atualizar as Diretrizes de Utilização - DUT nº 65.12, nº 65.17, nº 119, 158, e incluir a Diretriz de Utilização - DUT nº 175, em cumprimento ao disposto no art. 33 da RN nº 555/2022, ao art. 19-T da Lei nº 8.080/1990, alterada pela Lei nº 14.313/2022, e aos parágrafos 4º e 10 do art. 10 da Lei nº 9.656/1998.",
+   "dou": "2026-09-22",
+   "status": "Não vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/23651",
+   "visto_em": "2026-09-22T00:00:00-03:00",
+   "excluido": false
+  },
+  "23652": {
+   "guid": "103301316456072516",
+   "titulo": "Resolução Operacional - RO ANS nº 3170, de 18 setembro 2026",
+   "ementa": "Dispõe sobre a decretação de liquidação extrajudicial da UNIVIDA USA OPERADORA EM SAÚDE S/A .",
+   "dou": "2026-09-22",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/23652",
+   "visto_em": "2026-09-22T00:00:00-03:00",
+   "excluido": true
+  },
+  "23653": {
+   "guid": "103301316456072666",
+   "titulo": "Resolução Operacional - RO ANS nº 3171, de 18 setembro 2026",
+   "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da operadora DR DIA PLANOS ODONTOLÓGICOS E SAÚDE LTDA, Registro ANS nº 42.365-3",
+   "dou": "2026-09-22",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/23653",
+   "visto_em": "2026-09-22T00:00:00-03:00",
+   "excluido": true
+  },
+  "23661": {
+   "guid": "103301316456073719",
+   "titulo": "Resolução Operacional - RO ANS nº 3172, de 18 setembro 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora SELECT OPERADORA DE PLANO DE SAÚDE LTDA .",
+   "dou": "2026-09-22",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/23661",
+   "visto_em": "2026-09-22T00:00:00-03:00",
+   "excluido": true
+  },
+  "24383": {
+   "guid": "103301316456166135",
+   "titulo": "Resolução Operacional - RO ANS nº 3173, de 21 setembro 2026",
+   "ementa": "Dispõe sobre a determinação da alienação da carteira da operadora INTEGRA ASSISTÊNCIA MÉDICA S.A.",
+   "dou": "2026-09-23",
+   "status": "Vigente",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/24383",
+   "visto_em": "2026-09-23T00:00:00-03:00",
+   "excluido": true
+  }
+ }
+}

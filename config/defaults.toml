@@ -1,0 +1,40 @@
+# Configuração do coletor buscaANS.
+# Qualquer chave pode ser sobrescrita por variável de ambiente BUSCAANS_<SECAO>_<CHAVE>
+# (ex.: BUSCAANS_COLETA_QUANTIDADE=60). Listas usam valores separados por ";".
+
+[ans]
+base_url = "https://componentes-portal.ans.gov.br"
+pagina_xml = "/pages/pt_BR/Legislacao/Legislacao_Overview_Gov.page.xml"
+entidade = "Legislacao.Legislacao"
+# Usado apenas se a descoberta automática no XML da página falhar.
+query_id_reserva = "2aUSBIBKzEKmUAR+PH54AA"
+link_legislacao = "/link/legislacao/{autonumber}"
+incluir_revogadas = "Sim"
+fuso = "America/Sao_Paulo"
+timeout_segundos = 30
+user_agent = "buscaANS/1.0 (+https://github.com/jarbas-martinho/buscaANS)"
+
+[coleta]
+# Quantos atos mais recentes (por data do DOU) são lidos a cada execução.
+quantidade = 40
+# Tipos de ato ignorados: comparação pelo início do título.
+tipos_excluidos = [
+  "Resolução Operacional",
+  "Resolução Regimental",
+  "Despacho",
+  "Portaria",
+  "Resoluções Administrativas",
+]
+
+[feed]
+arquivo = "docs/feed.xml"
+itens = 50
+titulo = "ANS: novas legislações"
+link = "https://componentes-portal.ans.gov.br/link/legislacoes"
+descricao = "Atos normativos publicados pela ANS, coletados de componentes-portal.ans.gov.br"
+idioma = "pt-BR"
+
+[estado]
+arquivo = "data/estado.json"
+# Limite de registros guardados (os mais antigos por data do DOU são descartados).
+maximo = 2000
