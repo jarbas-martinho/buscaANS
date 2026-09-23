@@ -25,18 +25,18 @@ Qualquer chave de `config/defaults.toml` como `BUSCAANS_<SECAO>_<CHAVE>`. Exempl
 Para usar no Actions, definir em Settings > Secrets and variables > Actions > Variables e repassar no passo "Coletar" (`env:`).
 
 ## Trocar a origem no Power Automate
-O feed foi implantado **vazio**: os 40 atos já existentes estão marcados como pré-existentes, então
-o Power Automate não tem nada para recriar. A RN 680 (Autonumber 23651), pendente no fluxo antigo,
-é entregue por reenvio depois da troca.
+Os 40 atos já existentes na implantação estão marcados como pré-existentes e fora do feed, então o
+Power Automate não tem nada para recriar. O feed contém apenas a RN 680 (Autonumber 23651), que estava
+pendente no fluxo antigo, com data de 23/09/2026 16:53.
 
 1. Abrir o fluxo de coleta.
 2. No gatilho RSS "Quando um item de feed é publicado", trocar a URL do feed
    `https://feeds.feedburner.com/gov/NUXu` por `https://jarbas-martinho.github.io/buscaANS/feed.xml`.
 3. Manter "Propriedade de data: PublishDate", a condição e a ação "Criar item". Salvar.
-4. Esperar alguns minutos para o gatilho fazer a primeira leitura (feed vazio).
-5. No GitHub: Actions > "Coletar legislações da ANS" > Run workflow, preencher "reenviar" com `23651`
-   e executar (ou `gh workflow run coletar.yml -f reenviar=23651`).
-6. Em até ~10 minutos (cache do Pages) a RN 680 chega à lista e ao Teams.
+4. Conferir se a RN 680 chegou à lista e ao Teams. Se não chegar (o gatilho pode considerar só itens
+   publicados depois da troca), executar Actions > "Coletar legislações da ANS" > Run workflow com
+   "reenviar" = `23651` (ou `gh workflow run coletar.yml -f reenviar=23651`). Ela volta ao feed com data
+   atual e é entregue em até ~10 minutos (cache do Pages).
 
 Observação: a coluna DataPublicação passa a receber o momento em que o coletor detectou o ato
 (até algumas horas depois do cadastro no portal, conforme o próximo horário agendado).
