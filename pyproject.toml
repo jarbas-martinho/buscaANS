@@ -1,7 +1,9 @@
 [project]
 name = "buscaans"
-version = "1.1.0"
+version = "1.1.1"
 description = "Coletor de novas legislações da ANS que publica um feed RSS"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.12"
 dependencies = ["requests>=2.31", "tzdata>=2024.1"]
 
@@ -9,7 +11,7 @@ dependencies = ["requests>=2.31", "tzdata>=2024.1"]
 dev = ["pytest>=8"]
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]

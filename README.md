@@ -39,3 +39,6 @@ endereços do portal. Qualquer chave pode ser sobrescrita por variável `BUSCAAN
 - [Implantação e operação](docs/DEPLOYMENT.md)
 - [Dicionário de dados](docs/DATA_DICTIONARY.md)
 - [Histórico de versões](docs/CHANGELOG.md)
+
+## Licença
+[MIT](LICENSE). Código fornecido sem garantia; os dados coletados são públicos e pertencem à ANS.

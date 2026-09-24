@@ -1,5 +1,9 @@
 # Histórico de versões
 
+## 1.1.1 (2026-09-24)
+- Licença MIT (`LICENSE`).
+- Removidas referências a unidade organizacional específica na documentação.
+
 ## 1.1.0 (2026-09-23)
 - Coleta três vezes ao dia (09h, 13h e 18h de Brasília) no lugar de a cada 30 minutos.
 - Semeadura marca os atos existentes como `pre_existente` e os mantém fora do feed, eliminando o risco de o Power Automate recriá-los no SharePoint. Feed reimplantado vazio.
