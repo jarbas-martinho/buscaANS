@@ -1,7 +1,7 @@
 # Arquitetura
 
 ```
-GitHub Actions (cron 09h, 13h, 18h)
+GitHub Actions (cron 09:17, 13:17, 18:17)
   └─ python -m buscaans
        ├─ ans_client  ── HTTP ──> componentes-portal.ans.gov.br (/index.html, page.xml, /xas/)
        ├─ normalizar / filtro

@@ -1,5 +1,8 @@
 # Histórico de versões
 
+## 1.1.2 (2026-09-25)
+- Agendamento movido para o minuto 17 (09:17, 13:17 e 18:17 de Brasília): na hora cheia o GitHub atrasava as execuções em até 3 horas e descartou as das 09h.
+
 ## 1.1.1 (2026-09-24)
 - Licença MIT (`LICENSE`).
 - Removidas referências a unidade organizacional específica na documentação.

@@ -2,8 +2,9 @@ name: Coletar legislações da ANS
 
 on:
   schedule:
-    # 09h, 13h e 18h de Brasília (12h, 16h e 21h UTC); o GitHub pode atrasar alguns minutos
-    - cron: "0 12,16,21 * * *"
+    # 09:17, 13:17 e 18:17 de Brasília (12:17, 16:17 e 21:17 UTC). Minuto fora da hora cheia de propósito:
+    # na hora cheia o GitHub atrasa ou descarta execuções agendadas por excesso de carga.
+    - cron: "17 12,16,21 * * *"
   workflow_dispatch:
     inputs:
       reenviar:

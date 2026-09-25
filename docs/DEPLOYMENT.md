@@ -1,7 +1,7 @@
 # Implantação e operação
 
 ## Onde roda
-- **GitHub Actions**: `.github/workflows/coletar.yml`, às 09h, 13h e 18h de Brasília (cron `0 12,16,21 * * *`, em UTC) e sob demanda (`workflow_dispatch`, com o campo opcional "reenviar").
+- **GitHub Actions**: `.github/workflows/coletar.yml`, às 09:17, 13:17 e 18:17 de Brasília (cron `17 12,16,21 * * *`, em UTC; minuto fora da hora cheia porque nela o GitHub atrasa ou descarta execuções agendadas; mesmo assim podem ocorrer atrasos) e sob demanda (`workflow_dispatch`, com o campo opcional "reenviar").
   Para mudar os horários, editar a linha `cron` do workflow.
   Instala, roda os testes, coleta e commita `data/` e `docs/` somente se algo mudou.
 - **GitHub Pages**: branch `main`, pasta `/docs` (com `.nojekyll`). Feed em `https://jarbas-martinho.github.io/buscaANS/feed.xml`.

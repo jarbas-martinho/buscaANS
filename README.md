@@ -13,7 +13,7 @@ Mendix sem RSS e o fluxo parou. Este projeto recria o feed a partir do novo port
 basta trocar a URL do gatilho RSS (passo a passo em [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)).
 
 ## Como funciona
-1. Três vezes ao dia (09h, 13h e 18h de Brasília) o GitHub Actions executa `python -m buscaans`.
+1. Três vezes ao dia (09:17, 13:17 e 18:17 de Brasília) o GitHub Actions executa `python -m buscaans`.
 2. O coletor abre uma sessão anônima no portal, lê os 40 atos mais recentes pela data do DOU e
    identifica os que ainda não estão em `data/estado.json`.
 3. Atos dos tipos excluídos (Resolução Operacional, Resolução Regimental, Despacho, Portaria,
