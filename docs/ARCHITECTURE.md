@@ -19,6 +19,8 @@ Power Automate: gatilho RSS ──────┘──> Criar item em lista Sha
 | `normalizar.py` | Ementa sem HTML, `DataDOU` no fuso de São Paulo, status legível |
 | `filtro.py` | Exclusão pelo início do título |
 | `estado.py` | Leitura, poda e gravação idempotente do estado |
+| `identidade.py` | Identidade da norma, comparação conservadora de ementas e GUID RSS estável |
+| `protecao.py` | Limites de publicação, resumo de revisão e aprovação vinculada ao lote |
 | `feed.py` | RSS 2.0 com a biblioteca padrão |
 | `__main__.py` | Orquestração e registro em log |
 
@@ -26,10 +28,29 @@ Power Automate: gatilho RSS ──────┘──> Criar item em lista Sha
 - **Feed RSS em vez de gravar direto no SharePoint.** Reaproveita o fluxo existente, usa só conectores padrão do Power Automate e não exige credenciais corporativas fora do tenant.
 - **Mesma consulta da página (`retrieve` por `queryId`), não `retrieve_by_xpath`.** A consulta genérica devolve rascunhos e versões antigas (7.849 registros contra 4.693 exibidos).
 - **`queryId` descoberto a cada execução.** É um hash que muda quando a ANS publica nova versão do sistema. A página tem cinco grades equivalentes; o coletor tenta cada uma e, por último, a reserva da configuração.
-- **Chave do ato = `Autonumber`**, que também forma o link público `/link/legislacao/{Autonumber}`. O atributo `Url` do objeto aponta para domínio interno e não é usado.
+- **Identidade independente do cadastro.** A chave `identidade` usa o prefixo normalizado do título
+  (tipo e órgão), número, data completa do ato e data do DOU. A normalização tolera caixa, acentos,
+  espaços, pontuação e o `de` nas datas. Títulos fora do formato reconhecido usam o título completo
+  normalizado + DOU, sem tentar adivinhar tipo ou órgão. Retificações no título e outro DOU geram
+  identidades distintas; ementa divergente para a mesma identidade ou ID bloqueia a coleta para revisão.
+  O parser não tenta equiparar abreviações diferentes de órgãos ou tipos.
+- **Referências preservadas.** A chave numérica de `itens` continua sendo o primeiro `Autonumber`
+  conhecido, por compatibilidade operacional. `identificadores` reúne todos os números/guids
+  reconciliados. Um cadastro novo equivalente atualiza o link, mantendo `visto_em`, `pre_existente`
+  e `rss_guid`. IDs antigos já conhecidos não fazem o link regredir. Novos atos recebem GUID RSS
+  derivado da identidade; atos legados mantêm o GUID já publicado.
 - **`pubDate` = momento da detecção.** O gatilho RSS do Power Automate só entrega itens com data posterior à última verificação; a ANS registra atos com `DataDOU` à meia-noite e às vezes com dias de atraso, então usar a data do DOU faria perder itens. A data do DOU vai na descrição e em `<category>`.
 - **Semeadura sem feed.** Na primeira execução (sem `estado.json`) todos os atos lidos são marcados `pre_existente` e ficam fora do feed. Assim o feed só contém atos detectados depois da implantação, e o Power Automate não tem o que recriar, qualquer que seja o comportamento do gatilho na primeira leitura.
-- **Reenvio controlado.** `--reenviar` (ou o campo "reenviar" da execução manual do workflow) remove atos do estado; na leitura seguinte entram no feed com data atual. Serve para entregar um ato pendente ou repetir um aviso.
+- **Reenvio controlado.** `--reenviar` aceita qualquer Autonumber reconciliado. Se a norma estiver na
+  leitura, atualiza `visto_em` e libera `pre_existente`, preservando os aliases e o GUID RSS. Não remove
+  o histórico. Só o reenvio explicitamente solicitado dispensa a revisão por DOU antigo.
+- **Proteção antes de gravar.** Mudanças são preparadas em memória. A partir de 5 normas com novos IDs,
+  10 atos desconhecidos (incluindo excluídos), ou uma norma desconhecida elegível com DOU ausente ou
+  anterior à janela de 7 dias, a execução falha e preserva os arquivos anteriores. A semeadura inicial
+  não publica nada, por isso não exige aprovação de volume. Conflitos de identidade continuam bloqueados.
+- **Aprovação específica.** O código SHA-256 vincula estado anterior, eventos candidatos (incluindo
+  conteúdo e IDs), limites e motivos. Não inclui a hora de execução. Mudanças nesses dados invalidam
+  a aprovação; não há desativação persistente da proteção. Conflitos de conteúdo não são liberados por código.
 - **Frequência de três execuções diárias.** A ANS publica poucos atos por semana; mais frequência não traz ganho e aumenta a carga no portal.
 - **Leitura dos N mais recentes, sem paginação por deslocamento**, porque inserções deslocam as páginas.
 - **Arquivos só são regravados quando o conteúdo muda** (`lastBuildDate` = última novidade), evitando commits vazios.
