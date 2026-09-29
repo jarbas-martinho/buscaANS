@@ -32,7 +32,8 @@ def montar(itens: list[dict], cfg_feed: dict) -> str:
         e = ET.SubElement(canal, "item")
         ET.SubElement(e, "title").text = i["titulo"]
         ET.SubElement(e, "link").text = i["link"]
-        ET.SubElement(e, "guid", isPermaLink="true").text = i["link"]
+        guid = i.get("rss_guid", i["link"])
+        ET.SubElement(e, "guid", isPermaLink="false" if guid.startswith("urn:") else "true").text = guid
         ET.SubElement(e, "description").text = descricao(i)
         ET.SubElement(e, "pubDate").text = _rfc822(i["visto_em"])
         if i.get("dou"):

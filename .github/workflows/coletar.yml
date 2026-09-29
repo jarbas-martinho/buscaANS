@@ -11,6 +11,10 @@ on:
         description: "Autonumbers que devem voltar ao feed como novos, separados por vírgula (ex.: 23651)"
         required: false
         default: ""
+      aprovar_lote:
+        description: "Código exato do lote bloqueado, após revisar o resumo da execução"
+        required: false
+        default: ""
 
 concurrency:
   group: coletar
@@ -42,7 +46,8 @@ jobs:
       - name: Coletar
         env:
           REENVIAR: ${{ inputs.reenviar }}
-        run: python -m buscaans --reenviar "$REENVIAR"
+          APROVAR_LOTE: ${{ inputs.aprovar_lote }}
+        run: python -m buscaans --reenviar "$REENVIAR" --aprovar-lote "$APROVAR_LOTE"
 
       - name: Commitar novidades
         run: |

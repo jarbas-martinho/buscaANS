@@ -34,6 +34,13 @@ link = "https://componentes-portal.ans.gov.br/link/legislacoes"
 descricao = "Atos normativos publicados pela ANS, coletados de componentes-portal.ans.gov.br"
 idioma = "pt-BR"
 
+[protecao]
+# Bloqueia antes de gravar; revisão no resumo do Actions. Valores positivos.
+limite_trocas = 5
+limite_novos = 10
+# Norma desconhecida elegível para o feed, com DOU anterior a esta janela ou ausente, exige revisão.
+atraso_dou_dias = 7
+
 [estado]
 arquivo = "data/estado.json"
 # Limite de registros guardados (os mais antigos por data do DOU são descartados).

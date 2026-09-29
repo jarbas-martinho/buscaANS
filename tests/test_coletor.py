@@ -115,7 +115,8 @@ def test_reenviar_devolve_ato_ao_feed_com_data_atual(cfg):
     assert "RN ANS nº 680" in rn680.findtext("title")
     assert rn680.findtext("pubDate") == "Thu, 24 Sep 2026 09:00:00 -0300"
     assert rn680.findtext("description").startswith("Publicado no DOU em 22/09/2026. Altera o Anexo I")
-    assert rn680.findtext("link") == rn680.findtext("guid")
+    assert rn680.findtext("guid").startswith("urn:buscaans:ato:")
+    assert rn680.find("guid").get("isPermaLink") == "false"
 
 
 def test_reenviar_rejeita_valor_invalido(cfg):

@@ -1,5 +1,13 @@
 # Histórico de versões
 
+## 1.2.0 (2026-09-29)
+- Identidade normativa independente de GUID/Autonumber da ANS, com todos os identificadores conciliados preservados.
+- Trocas de cadastro mantêm o `pubDate`, a marca de preexistente e o GUID RSS original; novos atos usam GUID derivado da identidade.
+- Bloqueio antes da gravação para trocas em massa, excesso de atos desconhecidos e normas antigas/sem DOU; resumo no Actions e aprovação específica do lote.
+- Conflitos de conteúdo exigem revisão e não são liberados pela aprovação de volume.
+- Conciliação offline e idempotente do incidente da coleta #20: 29 duplicados conciliados, 41 normas e 70 referências preservadas; cinco falsas novidades retiradas do feed.
+- Reenvio por identificador antigo ou atual sem apagar histórico; testes automáticos em PR sem coleta/publicação.
+
 ## 1.1.2 (2026-09-25)
 - Agendamento movido para o minuto 17 (09:17, 13:17 e 18:17 de Brasília): na hora cheia o GitHub atrasava as execuções em até 3 horas e descartou as das 09h.
 

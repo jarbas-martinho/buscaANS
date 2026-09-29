@@ -15,10 +15,11 @@ basta trocar a URL do gatilho RSS (passo a passo em [docs/DEPLOYMENT.md](docs/DE
 ## Como funciona
 1. Três vezes ao dia (09:17, 13:17 e 18:17 de Brasília) o GitHub Actions executa `python -m buscaans`.
 2. O coletor abre uma sessão anônima no portal, lê os 40 atos mais recentes pela data do DOU e
-   identifica os que ainda não estão em `data/estado.json`.
+   identifica normas por tipo/órgão, número, data do ato e DOU, sem depender do ID do cadastro da ANS.
 3. Atos dos tipos excluídos (Resolução Operacional, Resolução Regimental, Despacho, Portaria,
    Resoluções Administrativas) ficam registrados, mas fora do feed.
-4. `docs/feed.xml` é regravado e publicado pelo GitHub Pages.
+4. Trocas de cadastro preservam a data de detecção e o GUID do RSS. Lotes suspeitos param para revisão
+   no Actions antes de qualquer gravação; lotes aprovados atualizam `docs/feed.xml` no GitHub Pages.
 
 ## Uso local
 ```bash
@@ -33,12 +34,17 @@ Tudo em [config/defaults.toml](config/defaults.toml): tipos excluídos, quantida
 endereços do portal. Qualquer chave pode ser sobrescrita por variável `BUSCAANS_<SECAO>_<CHAVE>`
 (listas separadas por `;`), por exemplo `BUSCAANS_COLETA_TIPOS_EXCLUIDOS="Portaria;Despacho"`.
 
+Proteções padrão: revisão a partir de 5 normas com novos identificadores, 10 atos desconhecidos no
+mesmo lote, ou qualquer norma desconhecida elegível com DOU de mais de 7 dias atrás ou ausente.
+Veja como revisar e liberar um lote em [Implantação e operação](docs/DEPLOYMENT.md#lotes-bloqueados).
+
 ## Documentação
 - [Arquitetura](docs/ARCHITECTURE.md)
 - [Integrações (portal da ANS e Power Automate)](docs/INTEGRATIONS.md)
 - [Implantação e operação](docs/DEPLOYMENT.md)
 - [Dicionário de dados](docs/DATA_DICTIONARY.md)
 - [Histórico de versões](docs/CHANGELOG.md)
+- [Incidente de 28/09/2026 e conciliação](docs/INCIDENTE_2026-09-28.md)
 
 ## Licença
 [MIT](LICENSE). Código fornecido sem garantia; os dados coletados são públicos e pertencem à ANS.
