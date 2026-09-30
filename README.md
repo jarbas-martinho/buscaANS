@@ -15,10 +15,12 @@ basta trocar a URL do gatilho RSS (passo a passo em [docs/DEPLOYMENT.md](docs/DE
 ## Como funciona
 1. Três vezes ao dia (09:17, 13:17 e 18:17 de Brasília) o GitHub Actions executa `python -m buscaans`.
 2. O coletor abre uma sessão anônima no portal, lê os 40 atos mais recentes pela data do DOU e
-   identifica normas por tipo/órgão, número, data do ato e DOU, sem depender do ID do cadastro da ANS.
+   reconhece cada norma pelo número original da ANS (`AutonumberOriginal`), que se mantém quando a
+   ANS publica versões atualizadas; o título (tipo/órgão, número, datas) é usado só como último recurso.
 3. Atos dos tipos excluídos (Resolução Operacional, Resolução Regimental, Despacho, Portaria,
    Resoluções Administrativas) ficam registrados, mas fora do feed.
-4. Trocas de cadastro preservam a data de detecção e o GUID do RSS. Lotes suspeitos param para revisão
+4. Versões atualizadas não viram novidade: preservam a data de detecção e o GUID do RSS, e o link usa o
+   número original, que o portal redireciona para a versão vigente. Lotes suspeitos param para revisão
    no Actions antes de qualquer gravação; lotes aprovados atualizam `docs/feed.xml` no GitHub Pages.
 
 ## Uso local

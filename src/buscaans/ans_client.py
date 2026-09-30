@@ -92,15 +92,20 @@ class ClienteANS:
             raise ErroANS("Lista de legislações veio vazia (queryId inválido ou página alterada?)")
         return [_achatar(o) for o in objetos]
 
-    def autonumber(self, guid: str) -> str:
+    def numeros(self, guid: str) -> tuple[str, str | None]:
+        """(Autonumber da versão, AutonumberOriginal). O original é None quando o registro é a própria
+        versão original. Versões atualizadas de um ato ganham Autonumber e guid novos, mas mantêm o
+        AutonumberOriginal, cujo link público redireciona para a versão vigente."""
         dados = self._xas({"action": "retrieve_by_ids", "params": {"ids": [guid], "schema": {}}})
         objs = dados.get("objects") or []
         if not objs:
             raise ErroANS(f"Objeto {guid} não encontrado")
-        valor = objs[0]["attributes"].get("Autonumber", {}).get("value")
+        attrs = objs[0]["attributes"]
+        valor = (attrs.get("Autonumber") or {}).get("value")
         if not valor or str(valor) == "0":
             raise ErroANS(f"Objeto {guid} sem Autonumber")
-        return str(valor)
+        original = (attrs.get("AutonumberOriginal") or {}).get("value")
+        return str(valor), (str(original) if original and str(original) != "0" else None)
 
     def link(self, autonumber: str) -> str:
         return self.base + self.cfg["link_legislacao"].format(autonumber=autonumber)

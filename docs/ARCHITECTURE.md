@@ -28,11 +28,17 @@ Power Automate: gatilho RSS ──────┘──> Criar item em lista Sha
 - **Feed RSS em vez de gravar direto no SharePoint.** Reaproveita o fluxo existente, usa só conectores padrão do Power Automate e não exige credenciais corporativas fora do tenant.
 - **Mesma consulta da página (`retrieve` por `queryId`), não `retrieve_by_xpath`.** A consulta genérica devolve rascunhos e versões antigas (7.849 registros contra 4.693 exibidos).
 - **`queryId` descoberto a cada execução.** É um hash que muda quando a ANS publica nova versão do sistema. A página tem cinco grades equivalentes; o coletor tenta cada uma e, por último, a reserva da configuração.
-- **Identidade independente do cadastro.** A chave `identidade` usa o prefixo normalizado do título
+- **Número original da ANS como identidade principal.** A ANS publica versões atualizadas de um ato
+  (`Versao = Atualizada`), cada uma com `Autonumber` e guid novos; o campo `AutonumberOriginal` aponta
+  para o ato original, e `/link/legislacao/{original}` redireciona para a versão vigente. O coletor
+  reconhece o ato por guid, número da versão, número original e, só por último, pela identidade do
+  título. Versão confirmada por número atualiza título, ementa, DOU, situação e link, sem republicar e
+  sem revisão manual; título padronizado ou ementa alterada numa versão não bloqueiam a coleta.
+- **Identidade pelo título como último recurso.** Usada apenas quando nenhum número bate. A chave `identidade` usa o prefixo normalizado do título
   (tipo e órgão), número, data completa do ato e data do DOU. A normalização tolera caixa, acentos,
   espaços, pontuação e o `de` nas datas. Títulos fora do formato reconhecido usam o título completo
   normalizado + DOU, sem tentar adivinhar tipo ou órgão. Retificações no título e outro DOU geram
-  identidades distintas; ementa divergente para a mesma identidade ou ID bloqueia a coleta para revisão.
+  identidades distintas; ementa divergente para a mesma identidade (sem número em comum) bloqueia a coleta para revisão.
   O parser não tenta equiparar abreviações diferentes de órgãos ou tipos.
 - **Referências preservadas.** A chave numérica de `itens` continua sendo o primeiro `Autonumber`
   conhecido, por compatibilidade operacional. `identificadores` reúne todos os números/guids
@@ -44,7 +50,7 @@ Power Automate: gatilho RSS ──────┘──> Criar item em lista Sha
 - **Reenvio controlado.** `--reenviar` aceita qualquer Autonumber reconciliado. Se a norma estiver na
   leitura, atualiza `visto_em` e libera `pre_existente`, preservando os aliases e o GUID RSS. Não remove
   o histórico. Só o reenvio explicitamente solicitado dispensa a revisão por DOU antigo.
-- **Proteção antes de gravar.** Mudanças são preparadas em memória. A partir de 5 normas com novos IDs,
+- **Proteção antes de gravar.** Mudanças são preparadas em memória. A partir de 5 normas reconhecidas só pelo título com novos IDs,
   10 atos desconhecidos (incluindo excluídos), ou uma norma desconhecida elegível com DOU ausente ou
   anterior à janela de 7 dias, a execução falha e preserva os arquivos anteriores. A semeadura inicial
   não publica nada, por isso não exige aprovação de volume. Conflitos de identidade continuam bloqueados.

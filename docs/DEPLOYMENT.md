@@ -69,9 +69,9 @@ links e o código SHA-256 do lote. O código não é credencial: identifica exat
 4. Não aumente limites apenas para contornar um incidente. A aprovação vale para um lote e não
    desabilita proteções futuras. Um código antigo não é aceito depois que o estado muda.
 
-Conflitos de identidade/ementa exigem examinar retificações, republicações e possível reutilização
-de IDs. `aprovar_lote` não libera esses conflitos: é preciso uma conciliação explícita do conteúdo.
-Títulos de formato diferente podem exigir revisão mesmo quando representam a mesma norma.
+Conflitos de identidade/ementa ocorrem só quando a norma é reconhecida pelo título, sem número em comum.
+Exigem examinar retificações, republicações e possível reutilização de IDs; `aprovar_lote` não os libera.
+Versões atualizadas reconhecidas pelo `AutonumberOriginal` não passam por esse bloqueio nem contam como troca.
 
 ## Conciliar registros locais
 
