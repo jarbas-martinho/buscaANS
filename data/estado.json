@@ -7,7 +7,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora UNIODONTO BELÉM - COOPERATIVA DE ASSISTÊNCIA À SAÚDE ODONTOLÓGICA.",
    "dou": "2026-06-30",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25573",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11823",
    "visto_em": "2026-06-30T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -20,7 +20,8 @@
     "25573": [
      "103301316456324683"
     ]
-   }
+   },
+   "original": "11823"
   },
   "11892": {
    "guid": "103301316456310179",
@@ -28,7 +29,7 @@
    "ementa": "Altera a Instrução Normativa ANS nº 28, de 16 de dezembro de 2022, que dispõe sobre os procedimentos do Registro de Produtos.",
    "dou": "2026-07-22",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25460",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11892",
    "visto_em": "2026-07-22T00:00:00-03:00",
    "excluido": false,
    "pre_existente": true,
@@ -41,7 +42,8 @@
     "25460": [
      "103301316456310179"
     ]
-   }
+   },
+   "original": "11892"
   },
   "11917": {
    "guid": "103301316456323350",
@@ -49,7 +51,7 @@
    "ementa": "Dispõe sobre a decretação de liquidação extrajudicial da YOU ASSISTÊNCIA MÉDICA LTDA.",
    "dou": "2026-06-30",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25563",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11917",
    "visto_em": "2026-06-30T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -62,7 +64,8 @@
     "25563": [
      "103301316456323350"
     ]
-   }
+   },
+   "original": "11917"
   },
   "11928": {
    "guid": "103301316456327490",
@@ -70,7 +73,7 @@
    "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora SANTO ANDRÉ PLANOS DE ASSISTENCIA MÉDICA LTDA.",
    "dou": "2026-07-22",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25595",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11928",
    "visto_em": "2026-07-22T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -83,7 +86,8 @@
     "25595": [
      "103301316456327490"
     ]
-   }
+   },
+   "original": "11928"
   },
   "11966": {
    "guid": "103301316456313210",
@@ -91,7 +95,7 @@
    "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora UNIMED OESTE DO PARÁ - COOPERATIVA DE TRABALHO MÉDICO.",
    "dou": "2026-07-01",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25483",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11966",
    "visto_em": "2026-07-01T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -104,7 +108,8 @@
     "25483": [
      "103301316456313210"
     ]
-   }
+   },
+   "original": "11966"
   },
   "12043": {
    "guid": "103301316456331468",
@@ -112,7 +117,7 @@
    "ementa": "Altera o anexo II da Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para a atualização da Diretriz de Utilização - DUT nº 170 do anexo II da RN nº 465/2021, relacionada ao \"IMPLANTE SUBDÉRMICO HORMONAL PARA CONTRACEPÇÃO (COM DIRETRIZ DE UTILIZAÇÃO)\", para ampliar a cobertura assistencial do implante subdérmico de etonogestrel para prevenção da gravidez não desejada em adolescentes de 15 a 17 anos, em cumprimento ao disposto no art. 33 da RN nº 555/2022, ao art. 19T da Lei nº 8.080/1990, alterada pela Lei nº 14.313/2022, e aos parágrafos 4º e 10, do art. 10, da Lei nº 9.656/1998",
    "dou": "2026-06-11",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25626",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12043",
    "visto_em": "2026-06-11T00:00:00-03:00",
    "excluido": false,
    "pre_existente": true,
@@ -125,7 +130,8 @@
     "25626": [
      "103301316456331468"
     ]
-   }
+   },
+   "original": "12043"
   },
   "12211": {
    "guid": "103301316456333432",
@@ -133,7 +139,7 @@
    "ementa": "Dispõe sobre a comercialização de planos ou produtos da operadora PLANO SIGMA SAÚDE LTDA.",
    "dou": "2026-06-30",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25641",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12211",
    "visto_em": "2026-06-30T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -146,7 +152,8 @@
     "25641": [
      "103301316456333432"
     ]
-   }
+   },
+   "original": "12211"
   },
   "12251": {
    "guid": "103301316456318936",
@@ -154,7 +161,7 @@
    "ementa": "Dispõe sobre a retificação do termo legal da liquidação extrajudicial da GOOD LIFE SAÚDE LTDA - EM LIQUIDAÇÃO EXTRAJUDICIAL.",
    "dou": "2026-06-30",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25528",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12251",
    "visto_em": "2026-06-30T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -167,7 +174,8 @@
     "25528": [
      "103301316456318936"
     ]
-   }
+   },
+   "original": "12251"
   },
   "12287": {
    "guid": "103301316456329560",
@@ -175,7 +183,7 @@
    "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da operadora ATÍVIA SERVIÇOS DE SAÚDE S/A, Registro ANS nº 32.051-0.",
    "dou": "2026-06-30",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25611",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12287",
    "visto_em": "2026-06-30T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -188,7 +196,8 @@
     "25611": [
      "103301316456329560"
     ]
-   }
+   },
+   "original": "12287"
   },
   "12429": {
    "guid": "103301316454426875",
@@ -206,7 +215,8 @@
     "12429": [
      "103301316454426875"
     ]
-   }
+   },
+   "original": "12429"
   },
   "12434": {
    "guid": "103301316456319880",
@@ -214,7 +224,7 @@
    "ementa": "Dispõe sobre a retificação do termo legal da liquidação extrajudicial da SEMPRE SAÚDE FAMÍLIA ADMINISTRADORA DE BENEFÍCIOS LTDA - EM LIQUIDAÇÃO EXTRAJUDICIAL.",
    "dou": "2026-06-30",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25536",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12434",
    "visto_em": "2026-06-30T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -227,7 +237,8 @@
     "25536": [
      "103301316456319880"
     ]
-   }
+   },
+   "original": "12434"
   },
   "12517": {
    "guid": "103301316456328738",
@@ -235,7 +246,7 @@
    "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora UNIMED NORTE/NORDESTE-FEDERAÇÃO INTERFEDERATIVA DAS SOCIEDADES COOPERATIVAS DE TRABALHO MÉDICO EM RECUPERAÇÃO JUDICIAL.",
    "dou": "2026-07-22",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25605",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12517",
    "visto_em": "2026-07-22T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -248,7 +259,8 @@
     "25605": [
      "103301316456328738"
     ]
-   }
+   },
+   "original": "12517"
   },
   "12554": {
    "guid": "103301316456310792",
@@ -256,7 +268,7 @@
    "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a cobertura obrigatória do medicamento antineoplásico oral Acalabrutinibe, em combinação com venetoclax, para o tratamento de pacientes adultos com leucemia linfocítica crônica (LLC) ou linfoma linfocítico de pequenas células (LLPC) sem deleção 17p ou mutação TP53, em cumprimento ao disposto nos parágrafos 4º, 7º e 8º do art. 10, da Lei nº 9.656/1998.",
    "dou": "2026-06-11",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25465",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12554",
    "visto_em": "2026-06-11T00:00:00-03:00",
    "excluido": false,
    "pre_existente": true,
@@ -269,7 +281,8 @@
     "25465": [
      "103301316456310792"
     ]
-   }
+   },
+   "original": "12554"
   },
   "12593": {
    "guid": "103301316456331720",
@@ -277,7 +290,7 @@
    "ementa": "Dispõe sobre a determinação da alienação da carteira da CEAM BRASIL - PLANOS DE SAÚDE LTDA.",
    "dou": "2026-08-10",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25628",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12593",
    "visto_em": "2026-08-10T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -290,7 +303,8 @@
     "25628": [
      "103301316456331720"
     ]
-   }
+   },
+   "original": "12593"
   },
   "12651": {
    "guid": "103301316454455204",
@@ -298,7 +312,7 @@
    "ementa": "Dispõe sobre a determinação da alienação da carteira da INTERCLÍNICAS PLANO VIDA USA OPERADORA DE SAÚDE LTDA.",
    "dou": "2026-07-21",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12651",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11824",
    "visto_em": "2026-07-21T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -308,7 +322,8 @@
     "12651": [
      "103301316454455204"
     ]
-   }
+   },
+   "original": "11824"
   },
   "12884": {
    "guid": "103301316454485006",
@@ -316,7 +331,7 @@
    "ementa": "Altera as Resolução Normativa ANS nº 585, de 18 de agosto de 2023, que dispõe sobre os critérios para as alterações na rede assistencial hospitalar no que se refere à substituição de entidade hospitalar e redimensionamento de rede por redução.",
    "dou": "2026-07-21",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12884",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11853",
    "visto_em": "2026-07-21T00:00:00-03:00",
    "excluido": false,
    "pre_existente": true,
@@ -326,7 +341,8 @@
     "12884": [
      "103301316454485006"
     ]
-   }
+   },
+   "original": "11853"
   },
   "12953": {
    "guid": "103301316454493843",
@@ -334,7 +350,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora AMEPLAN ASSISTÊNCIA MÉDICA PLANEJADA LTDA.",
    "dou": "2026-07-21",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12953",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12436",
    "visto_em": "2026-07-21T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -344,7 +360,8 @@
     "12953": [
      "103301316454493843"
     ]
-   }
+   },
+   "original": "12436"
   },
   "13030": {
    "guid": "103301316454503730",
@@ -352,7 +369,7 @@
    "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a cobertura obrigatória do procedimento ablação percutânea por cateter de campo pulsado para o tratamento da fibrilação atrial paroxística, em cumprimento ao disposto nos parágrafos 4º, 7º e 8º do art. 10, da Lei nº 9.656/1998.",
    "dou": "2026-07-22",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/13030",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11856",
    "visto_em": "2026-07-22T00:00:00-03:00",
    "excluido": false,
    "pre_existente": true,
@@ -362,7 +379,8 @@
     "13030": [
      "103301316454503730"
     ]
-   }
+   },
+   "original": "11856"
   },
   "13395": {
    "guid": "103301316454550515",
@@ -370,7 +388,7 @@
    "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da BRASIL ODONTO OPERADORA DE PLANOS ODONTOLÓGICOS LTDA, Registro ANS nº 42.156-1.",
    "dou": "2026-07-21",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/13395",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11912",
    "visto_em": "2026-07-21T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -380,7 +398,8 @@
     "13395": [
      "103301316454550515"
     ]
-   }
+   },
+   "original": "11912"
   },
   "13633": {
    "guid": "103301316454580981",
@@ -388,7 +407,7 @@
    "ementa": "Dispõe sobre a aprovação do Manual de Utilização da Sala 360 e do Termo de Responsabilidade e Sigilo para uso da Sala 360, no âmbito da Agência Nacional de Saúde Suplementar – ANS.",
    "dou": "2026-07-03",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/13633",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11939",
    "visto_em": "2026-07-03T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -398,7 +417,8 @@
     "13633": [
      "103301316454580981"
     ]
-   }
+   },
+   "original": "11939"
   },
   "14003": {
    "guid": "103301316454628333",
@@ -406,7 +426,7 @@
    "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da POLIMÉDICA SAÚDE SOCIEDADE SIMPLES LTDA, Registro ANS nº 31.690-3.",
    "dou": "2026-07-21",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/14003",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11979",
    "visto_em": "2026-07-21T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -416,7 +436,8 @@
     "14003": [
      "103301316454628333"
     ]
-   }
+   },
+   "original": "11979"
   },
   "15325": {
    "guid": "103301316454797468",
@@ -424,7 +445,7 @@
    "ementa": "Tornar pública a aprovação do Plano Diretor de Tecnologia da Informação e Comunicação - PDTIC da ANS, relativo aos anos de 2026 e 2027, apresentado e aprovado pela Diretoria Colegiada no Comitê de Governança, Riscos e Controles – CGRC no dia 27 de fevereiro de 2026.",
    "dou": "2026-07-03",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15325",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12210",
    "visto_em": "2026-07-03T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -434,7 +455,8 @@
     "15325": [
      "103301316454797468"
     ]
-   }
+   },
+   "original": "12210"
   },
   "15530": {
    "guid": "103301316454823737",
@@ -442,7 +464,7 @@
    "ementa": "Fica estabelecido o perfil profissional desejável dos cargos comissionados executivos - CCE e funções comissionadas executivas - FCE, de níveis 11 a 17, alocados na estrutura regimental da Agência Nacional de Saúde Suplementar - ANS, conforme consta dos Anexos desta portaria.",
    "dou": "2026-07-03",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15530",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12277",
    "visto_em": "2026-07-03T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -452,7 +474,8 @@
     "15530": [
      "103301316454823737"
     ]
-   }
+   },
+   "original": "12277"
   },
   "15572": {
    "guid": "103301316454829140",
@@ -460,7 +483,7 @@
    "ementa": "Altera o anexo II da Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para a atualização da Diretriz de Utilização - DUT nº 158 do anexo II da RN nº 465/2021, relacionada ao \"TERAPIA MEDICAMENTOSA INJETÁVEL AMBULATORIAL (COM DIRETRIZ DE UTILIZAÇÃO)\", para assegurar a cobertura assistencial aos medicamentos Undecilato de testosterona; Cipionato de testosterona; e a combinação de quatro ésteres de testosterona (Propionato de testosterona, Fempropionato de testosterona, Isocaproato de testosterona e Decanoato de testosterona) para o tratamento de hipogonadismo hipogonadotrófico orgânico em homens adultos e em adolescentes do sexo masculino, em cumprimento ao disposto no art. 33 da RN nº 555/2022, ao art. 19T da Lei º 8.080/1990, alterada pela Lei nº 14.313/2022, e aos parágrafos 4º e 10, do art. 10, da Lei nº 9.656/1998.",
    "dou": "2026-07-21",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15572",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/12339",
    "visto_em": "2026-07-21T00:00:00-03:00",
    "excluido": false,
    "pre_existente": true,
@@ -470,7 +493,8 @@
     "15572": [
      "103301316454829140"
     ]
-   }
+   },
+   "original": "12339"
   },
   "15691": {
    "guid": "103301316456316109",
@@ -478,7 +502,7 @@
    "ementa": "Dispõe sobre a determinação da alienação da carteira da YOU ODONTO LTDA.",
    "dou": "2026-08-27",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25506",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15691",
    "visto_em": "2026-08-27T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -491,7 +515,8 @@
     "25506": [
      "103301316456316109"
     ]
-   }
+   },
+   "original": "15691"
   },
   "15692": {
    "guid": "103301316456316001",
@@ -499,7 +524,7 @@
    "ementa": "Dispõe sobre a determinação da alienação da carteira da SUL DO PARÁ SAÚDE LTDA.",
    "dou": "2026-08-27",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25505",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15692",
    "visto_em": "2026-08-27T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -512,7 +537,8 @@
     "25505": [
      "103301316456316001"
     ]
-   }
+   },
+   "original": "15692"
   },
   "15694": {
    "guid": "103301316456310678",
@@ -520,7 +546,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora AMESC - Associação Médica Espírita Cristã",
    "dou": "2026-08-27",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25464",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15694",
    "visto_em": "2026-08-27T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -533,7 +559,8 @@
     "25464": [
      "103301316456310678"
     ]
-   }
+   },
+   "original": "15694"
   },
   "15695": {
    "guid": "103301316456326462",
@@ -541,7 +568,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora FEDERAÇÃO DAS SOCIEDADES COOPERATIVAS DE TRABALHO MÉDICO DO ACRE, AMAPÁ, AMAZONAS, PARÁ, RONDONIA E RORAIMA.",
    "dou": "2026-08-27",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25587",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15695",
    "visto_em": "2026-08-27T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -554,7 +581,8 @@
     "25587": [
      "103301316456326462"
     ]
-   }
+   },
+   "original": "15695"
   },
   "15696": {
    "guid": "103301316456316440",
@@ -562,7 +590,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora UNIMED-RIO COOPERATIVA DE TRABALHO MÉDICO DO RIO DE JANEIRO.",
    "dou": "2026-08-27",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25509",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15696",
    "visto_em": "2026-08-27T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -575,7 +603,8 @@
     "25509": [
      "103301316456316440"
     ]
-   }
+   },
+   "original": "15696"
   },
   "15697": {
    "guid": "103301316456336720",
@@ -583,7 +612,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora UNIMED DE TAUBATÉ COOPERATIVA DE TRABALHO MÉDICO.",
    "dou": "2026-08-27",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25667",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15697",
    "visto_em": "2026-08-27T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -596,7 +625,8 @@
     "25667": [
      "103301316456336720"
     ]
-   }
+   },
+   "original": "15697"
   },
   "15698": {
    "guid": "103301316456334189",
@@ -604,7 +634,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora Unimed-São Gonçalo - Niterói - Sociedade Cooperativa Serviços Médicos e Hospitalares Ltda.",
    "dou": "2026-08-27",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25647",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15698",
    "visto_em": "2026-08-27T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -617,7 +647,8 @@
     "25647": [
      "103301316456334189"
     ]
-   }
+   },
+   "original": "15698"
   },
   "15699": {
    "guid": "103301316456311584",
@@ -625,7 +656,7 @@
    "ementa": "Altera os Anexos I e I-d da Resolução Regimental nº 21, de 26 de janeiro de 2022, que dispõe sobre o Regimento Interno da Agência Nacional de Saúde Suplementar – ANS, na parte referente aos cargos da Diretoria de Desenvolvimento Setorial – DIDES.",
    "dou": "2026-08-28",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25471",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15699",
    "visto_em": "2026-08-28T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -638,7 +669,8 @@
     "25471": [
      "103301316456311584"
     ]
-   }
+   },
+   "original": "15699"
   },
   "15702": {
    "guid": "103301316456328229",
@@ -646,7 +678,7 @@
    "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora SELECT OPERADORA DE PLANO DE SAUDE LTDA.",
    "dou": "2026-08-28",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25601",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/15702",
    "visto_em": "2026-08-28T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -659,7 +691,8 @@
     "25601": [
      "103301316456328229"
     ]
-   }
+   },
+   "original": "15702"
   },
   "19763": {
    "guid": "103301316456318336",
@@ -667,7 +700,7 @@
    "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora UNIMED DO EST. DO RJ FEDERAÇÃO EST. DAS COOPERATIVAS MÉDICAS.",
    "dou": "2026-09-09",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25524",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/19763",
    "visto_em": "2026-09-09T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -680,7 +713,8 @@
     "25524": [
      "103301316456318336"
     ]
-   }
+   },
+   "original": "19763"
   },
   "21753": {
    "guid": "103301316456311203",
@@ -688,7 +722,7 @@
    "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a ampliação da cobertura obrigatória do procedimento mamografia digital, de acordo com o art. 38 da Resolução Normativa 555/2022 e em cumprimento ao disposto no parágrafo 4º do art. 10, da Lei nº 9.656/1998.",
    "dou": "2026-09-14",
    "status": "Não vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25468",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/21753",
    "visto_em": "2026-09-14T00:00:00-03:00",
    "excluido": false,
    "pre_existente": true,
@@ -701,7 +735,8 @@
     "25468": [
      "103301316456311203"
     ]
-   }
+   },
+   "original": "21753"
   },
   "23651": {
    "guid": "103301316456318117",
@@ -709,7 +744,7 @@
    "ementa": "Altera o Anexo I da Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, para atualizar a descrição do procedimento IMPLANTE DE DISPOSITIVO/SISTEMA INTRAUTERINO (DIU/SIU) HORMONAL - INCLUI O DISPOSITIVO e altera o Anexo II da Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, para atualizar as Diretrizes de Utilização - DUT nº 65.12, nº 65.17, nº 119, 158, e incluir a Diretriz de Utilização - DUT nº 175, em cumprimento ao disposto no art. 33 da RN nº 555/2022, ao art. 19-T da Lei nº 8.080/1990, alterada pela Lei nº 14.313/2022, e aos parágrafos 4º e 10 do art. 10 da Lei nº 9.656/1998.",
    "dou": "2026-09-22",
    "status": "Não vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25522",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/23651",
    "visto_em": "2026-09-23T17:16:45-03:00",
    "excluido": false,
    "pre_existente": false,
@@ -722,7 +757,8 @@
     "25522": [
      "103301316456318117"
     ]
-   }
+   },
+   "original": "23651"
   },
   "23652": {
    "guid": "103301316456318571",
@@ -730,7 +766,7 @@
    "ementa": "Dispõe sobre a decretação de liquidação extrajudicial da UNIVIDA USA OPERADORA EM SAÚDE S/A .",
    "dou": "2026-09-22",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25525",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/23652",
    "visto_em": "2026-09-22T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -743,7 +779,8 @@
     "25525": [
      "103301316456318571"
     ]
-   }
+   },
+   "original": "23652"
   },
   "23653": {
    "guid": "103301316456318250",
@@ -751,7 +788,7 @@
    "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da operadora DR DIA PLANOS ODONTOLÓGICOS E SAÚDE LTDA, Registro ANS nº 42.365-3",
    "dou": "2026-09-22",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25523",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/23653",
    "visto_em": "2026-09-22T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -764,7 +801,8 @@
     "25523": [
      "103301316456318250"
     ]
-   }
+   },
+   "original": "23653"
   },
   "23661": {
    "guid": "103301316456318652",
@@ -772,7 +810,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora SELECT OPERADORA DE PLANO DE SAÚDE LTDA .",
    "dou": "2026-09-22",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25526",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/23661",
    "visto_em": "2026-09-22T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -785,7 +823,8 @@
     "25526": [
      "103301316456318652"
     ]
-   }
+   },
+   "original": "23661"
   },
   "24383": {
    "guid": "103301316456311027",
@@ -793,7 +832,7 @@
    "ementa": "Dispõe sobre a determinação da alienação da carteira da operadora INTEGRA ASSISTÊNCIA MÉDICA S.A.",
    "dou": "2026-09-23",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25466",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/24383",
    "visto_em": "2026-09-23T00:00:00-03:00",
    "excluido": true,
    "pre_existente": true,
@@ -806,7 +845,8 @@
     "25466": [
      "103301316456311027"
     ]
-   }
+   },
+   "original": "24383"
   },
   "25660": {
    "guid": "103301316456335814",
@@ -814,7 +854,7 @@
    "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora SAÚDE BRASIL ASSISTÊNCIA MÉDICA LTDA.",
    "dou": "2026-06-10",
    "status": "Vigente",
-   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25660",
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/11961",
    "visto_em": "2026-09-28T22:01:14-03:00",
    "excluido": true,
    "pre_existente": false,
@@ -824,7 +864,8 @@
     "25660": [
      "103301316456335814"
     ]
-   }
+   },
+   "original": "11961"
   }
  }
 }
