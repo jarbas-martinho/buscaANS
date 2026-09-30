@@ -36,9 +36,9 @@ class ClienteFalso:
     def listar(self, quantidade):
         return self.atos[:quantidade]
 
-    def autonumber(self, guid):
+    def numeros(self, guid):
         self.chamadas_autonumber += 1
-        return str(int(guid[-6:]))
+        return str(int(guid[-6:])), None
 
     def link(self, num):
         return f"https://componentes-portal.ans.gov.br/link/legislacao/{num}"
@@ -161,10 +161,10 @@ def test_feed_vazio_valido():
 
 def test_ato_sem_autonumber_nao_trava_os_demais(cfg):
     class ClienteComDefeito(ClienteFalso):
-        def autonumber(self, guid):
+        def numeros(self, guid):
             if guid == self.atos[0]["guid"]:
                 raise ErroANS("sem Autonumber")
-            return super().autonumber(guid)
+            return super().numeros(guid)
 
     atos = lista_real()
     assert executar(cfg, cliente=ClienteComDefeito(atos)) == len(atos) - 1

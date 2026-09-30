@@ -47,38 +47,59 @@ def atualizar_estado(estado: Estado, atos: list[dict], cliente, cfg: dict, agora
             "pre_existente": estado.novo,
         }
         identidade = chave(recebido)
+        # Reconhecimento, do mais para o menos confiável: guid conhecido, número da versão conhecido,
+        # número original (AutonumberOriginal) conhecido e, por último, a identidade pelo título.
         canonico = conhecidos.get(ato["guid"])
+        original = None  # número original deste ato, quando conhecido
         if canonico is not None:
             num = next(n for n, guids in estado.itens[canonico]["identificadores"].items()
                        if ato["guid"] in guids)
         else:
             try:
-                num = cliente.autonumber(ato["guid"])
+                num, original_ans = cliente.numeros(ato["guid"])
             except ErroANS as e:
                 log.warning("Ato ignorado nesta execução: %s", e)
                 continue
-            canonico = numeros.get(num) or identidades.get(identidade)
+            canonico = numeros.get(num) or (numeros.get(original_ans) if original_ans else None)
+            # Sem AutonumberOriginal o registro é a própria raiz, mas isso só vale para o ato
+            # reconhecido pelo número; num casamento pelo título a raiz continua desconhecida.
+            original = original_ans or (num if canonico is not None else None)
+        confirmado = canonico is not None
+        if not confirmado:
+            canonico = identidades.get(identidade)
         acao = None
         if canonico is not None:
             item = estado.itens[canonico]
-            conferir_conteudo(item, recebido)
+            if confirmado:
+                # Mesmo registro ou nova versão do mesmo ato: o conteúdo pode ter sido alterado pela ANS.
+                if atualizar_conteudo(item, recebido):
+                    log.info("CONTEÚDO ATUALIZADO %s (%s) | %s", canonico, num, item["titulo"])
+            else:
+                conferir_conteudo(item, recebido)
             aliases = item["identificadores"]
             if ato["guid"] not in aliases.get(num, []):
                 aliases.setdefault(num, []).append(ato["guid"])
                 aliases[num].sort()
                 item["guid"] = ato["guid"]
-                item["link"] = cliente.link(num)
-                acao = "novo_identificador"
+                if confirmado:
+                    log.info("NOVA VERSÃO %s (%s) | %s", canonico, num, item["titulo"])
+                else:
+                    acao = "novo_identificador"
+            if original and item.setdefault("original", original) != original:
+                log.warning("Número original divergente para %s: %s no estado, %s na ANS",
+                            canonico, item["original"], original)
+            item["link"] = cliente.link(item.get("original") or num)
             item["status"] = recebido["status"]
         else:
             canonico = num
             item = recebido
-            item.update(identidade=identidade, rss_guid=guid_rss(identidade),
-                        identificadores={num: [ato["guid"]]}, link=cliente.link(num))
+            original = original or num
+            item.update(identidade=identidade, rss_guid=guid_rss(identidade), original=original,
+                        identificadores={num: [ato["guid"]]}, link=cliente.link(original))
             estado.itens[canonico] = item
             novos.append(canonico)
             acao = "novo"
-        pedidos = solicitados.intersection(item["identificadores"])
+        pedidos = solicitados.intersection({*item["identificadores"], item.get("original")})
         if pedidos:
             item["visto_em"] = agora.isoformat(timespec="seconds")
             item["pre_existente"] = False
@@ -91,15 +112,43 @@ def atualizar_estado(estado: Estado, atos: list[dict], cliente, cfg: dict, agora
         if acao:
             eventos.append({"acao": acao, "numero": num, "guid": ato["guid"],
                             "identidade": identidade, "titulo": titulo, "ementa": recebido["ementa"],
-                            "link": cliente.link(num),
+                            "link": item["link"],
                             "dou": recebido["dou"], "status": recebido["status"],
                             "excluido": recebido["excluido"]})
         conhecidos[ato["guid"]] = canonico
         numeros[num] = canonico
+        if item.get("original"):
+            numeros[item["original"]] = canonico
         identidades[identidade] = canonico
     for n in solicitados - atendidos:
         log.warning("Reenvio: ato %s não foi encontrado entre os atos lidos", n)
     return novos
+
+
+def preencher_originais(estado: Estado, cliente) -> None:
+    """Registra o AutonumberOriginal das normas que ainda não o têm (estados anteriores à 1.3.0).
+    Uma consulta por norma, uma única vez; falhas ficam para a próxima execução."""
+    for canonico, item in estado.itens.items():
+        if item.get("original"):
+            continue
+        try:
+            num, original = cliente.numeros(item["guid"])
+        except ErroANS as e:
+            log.warning("Número original não obtido para %s: %s", canonico, e)
+            continue
+        item["original"] = original or num
+
+
+def atualizar_conteudo(item: dict, recebido: dict) -> bool:
+    """Aplica título, ementa e DOU da versão vigente. Não altera pubDate, GUID RSS nem o filtro de tipo."""
+    mudou = False
+    for campo in ("titulo", "ementa", "dou"):
+        if recebido[campo] and item.get(campo) != recebido[campo]:
+            item[campo] = recebido[campo]
+            mudou = True
+    if mudou:
+        item["identidade"] = chave(item)
+    return mudou
 
 
 def registrar_resumo(texto: str) -> None:
@@ -128,11 +177,12 @@ def executar(cfg: dict, cliente=None, agora: datetime | None = None, reenviar_nu
         if not n.isdigit():
             raise ValueError(f"Autonumber inválido para reenvio: {n!r}")
     estado.consolidar()
-    antes = deepcopy(estado.itens)
     eventos: list[dict] = []
     cliente = cliente or ClienteANS(cfg["ans"])
     try:
         cliente.abrir()
+        preencher_originais(estado, cliente)
+        antes = deepcopy(estado.itens)
         atos = cliente.listar(cfg["coleta"]["quantidade"])
         log.info("queryId em uso: %s (candidatos: %d)", cliente.query_id, len(cliente.candidatos))
         novos = atualizar_estado(estado, atos, cliente, cfg, agora, eventos, list(reenviar_numeros))

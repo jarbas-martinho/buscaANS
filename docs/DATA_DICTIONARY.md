@@ -11,12 +11,13 @@
 | `identidade` | texto JSON | Versão da chave, tipo/órgão, número, data do ato e DOU; fallback pelo título normalizado completo + DOU |
 | `identificadores` | objeto | Cada Autonumber conhecido aponta para a lista de guids Mendix associados à mesma norma |
 | `rss_guid` | texto | Identificador imutável no RSS: link legado ou `urn:buscaans:ato:<SHA-256 da identidade>` para novos atos |
+| `original` | texto numérico | `AutonumberOriginal` da ANS (ou o próprio `Autonumber`, se o ato nunca teve versão atualizada); também reconhece a norma e forma o link |
 | `guid` | texto | Identificador do cadastro atual; os anteriores ficam em `identificadores` |
 | `titulo` | texto | Título do ato, ex. "Resolução Normativa - RN ANS nº 680, de 18 setembro 2026" |
 | `ementa` | texto | Ementa sem HTML |
 | `dou` | data ISO (`AAAA-MM-DD`) ou nulo | Data de publicação no DOU, fuso de São Paulo |
 | `status` | texto | Situação exibida no portal ("Vigente", "Não vigente", ...) |
-| `link` | URL | Link do cadastro mais recente reconciliado, independente do GUID RSS |
+| `link` | URL | `/link/legislacao/{original}`, que o portal redireciona para a versão vigente; sem `original`, o número da versão mais recente |
 | `visto_em` | data e hora ISO com fuso | Momento da detecção; vira o `pubDate` do feed |
 | `excluido` | booleano | `true` se o tipo do ato está em `coleta.tipos_excluidos` (fica fora do feed) |
 | `pre_existente` | booleano | `true` se o ato já existia na implantação (semeadura); fica fora do feed para não ser recriado no SharePoint |

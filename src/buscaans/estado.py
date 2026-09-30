@@ -31,7 +31,10 @@ class Estado:
                 for guids in v["identificadores"].values() for guid in guids}
 
     def por_numero(self) -> dict[str, str]:
-        return {num: k for k, v in self.itens.items() for num in v["identificadores"]}
+        """Números de versão e números originais (AutonumberOriginal) de cada norma."""
+        numeros = {v["original"]: k for k, v in self.itens.items() if v.get("original")}
+        numeros.update({num: k for k, v in self.itens.items() for num in v["identificadores"]})
+        return numeros
 
     def consolidar(self) -> int:
         """Migra v1 e concilia duplicados sem perder IDs, pubDate ou pre_existente.
@@ -61,6 +64,8 @@ class Estado:
                 ))
             for campo in ("guid", "link", "status"):
                 anterior[campo] = item[campo]
+            if item.get("original"):
+                anterior.setdefault("original", item["original"])
             removidos += 1
         for campo in ("numero", "guid"):
             donos = {}

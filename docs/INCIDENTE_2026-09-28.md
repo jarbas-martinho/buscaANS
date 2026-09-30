@@ -40,3 +40,20 @@ reproduzir a resposta HTTP integral dos 40 atos da ANS, que não foi arquivada n
 Os testes verificam bloqueio sem gravação, aprovação do mesmo lote, rejeição de aprovação para
 lote diferente, preservação de aliases/datas/preexistentes e idempotência da conciliação.
 Todos executam sem acessar a ANS. Para executar: `python -m pytest -q`.
+
+## Adendo de 29/09/2026: causa confirmada
+
+Os registros recebidos em 28/09 são **versões atualizadas** dos mesmos atos. Consulta a
+`retrieve_by_ids` para os 70 registros (`tests/fixtures/originais_2026_09_29.json`):
+
+- os 30 registros vistos em 23/09 com `Versao = Original` estão hoje com `IsLegislacaoAtual = false`
+  e `AutonumberOriginal = 0`;
+- os 40 atos da lista atual têm `Versao = Atualizada`; 29 dos 30 recebidos em 28/09 têm
+  `AutonumberOriginal` igual ao número já conhecido (ex.: 25522 → 23651). O 30º, RO 3143 (25660 → 11961),
+  nunca tinha aparecido entre os 40 mais recentes;
+- `/link/legislacao/23651` redireciona para `/25522`, e `/11856` para `/13030` (RN 678).
+
+A versão 1.3.0 passa a reconhecer os atos pelo `AutonumberOriginal`. Com os números originais reais, o
+replay do lote de 28/09 não bloqueia, não publica nenhuma das 29 versões e registra só a RO 3143, fora
+do feed pelo tipo. Os 5 avisos já enviados ao Teams e ao SharePoint em 28/09 foram mantidos, por decisão
+do responsável.

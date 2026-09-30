@@ -1,5 +1,13 @@
 # Histórico de versões
 
+## 1.3.0 (2026-09-29)
+- Causa do incidente de 28/09 confirmada: a ANS publica **versões atualizadas** dos atos, com `Autonumber` e guid novos e o campo `AutonumberOriginal` apontando para o ato original.
+- Reconhecimento pela ordem guid, número da versão, `AutonumberOriginal` e, só por último, identidade pelo título. Versão confirmada pelo número original atualiza título, ementa, DOU, situação e link sem republicar, sem exigir revisão e sem contar como troca no limite de proteção.
+- Campo `original` no estado, preenchido uma vez para as normas já conhecidas (uma consulta por norma).
+- Links no feed e no estado passam a usar o número original, que o portal redireciona para a versão vigente.
+- `--reenviar` aceita também o número original.
+- Teste de regressão com os números originais reais dos 70 registros do incidente (`tests/fixtures/originais_2026_09_29.json`).
+
 ## 1.2.0 (2026-09-29)
 - Identidade normativa independente de GUID/Autonumber da ANS, com todos os identificadores conciliados preservados.
 - Trocas de cadastro mantêm o `pubDate`, a marca de preexistente e o GUID RSS original; novos atos usam GUID derivado da identidade.

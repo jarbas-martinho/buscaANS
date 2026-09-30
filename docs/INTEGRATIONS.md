@@ -10,17 +10,21 @@ As chamadas abaixo foram obtidas observando o navegador e podem mudar sem aviso.
 | 2 | `POST /xas/` `{"action":"get_session_data",...}` | Cookie `__Host-XASSESSIONID` e `csrftoken` |
 | 3 | `GET /pages/pt_BR/Legislacao/Legislacao_Overview_Gov.page.xml` | Descobrir `queryId` da lista (entidade `Legislacao.Legislacao`, ordem `DataDOU desc`, argumento `RevogadasIncluir`) |
 | 4 | `POST /xas/` `{"action":"retrieve","params":{"queryId":...,"options":{"amount":40,"sort":[["DataDOU","desc"]]}}}` com header `X-Csrf-Token` | Lista: `Titulo`, `Ementa` (HTML), `DataDOU` (epoch ms), `Status` |
-| 5 | `POST /xas/` `{"action":"retrieve_by_ids","params":{"ids":[guid],"schema":{}}}` | `Autonumber` de cada ato novo |
+| 5 | `POST /xas/` `{"action":"retrieve_by_ids","params":{"ids":[guid],"schema":{}}}` | `Autonumber` (versão) e `AutonumberOriginal` (ato original; 0 se o registro é o original) |
 | 6 | `POST /xas/` `{"action":"logout"}` | Encerrar a sessão |
 
-Link público do ato: `https://componentes-portal.ans.gov.br/link/legislacao/{Autonumber}`.
+Link público do ato: `https://componentes-portal.ans.gov.br/link/legislacao/{número}`. O número original
+redireciona para a versão vigente (ex.: `/23651` abre `/25522`); número inexistente devolve 404.
 
 **Sinais de quebra:** workflow falhando com "Nenhum queryId funcionou" ou "Lista de legislações veio vazia".
 Refazer a observação no navegador (DevTools, aba Rede, filtrar `xas`) e ajustar `ans_client.py` ou `config/defaults.toml`.
 
-Mudanças de `guid` e `Autonumber` também podem ocorrer sem mudar o conteúdo da norma. O coletor
-concilia esses cadastros pela identidade normativa e pela ementa. Trocas em massa bloqueiam a
-publicação para revisão no resumo do Actions; veja [operação](DEPLOYMENT.md#lotes-bloqueados).
+**Versões atualizadas.** A ANS pode criar uma versão atualizada de qualquer ato (`Versao = Atualizada`,
+`IsLegislacaoAtual = true`). A versão ganha `guid` e `Autonumber` novos e substitui a anterior na lista;
+`AutonumberOriginal` aponta para o ato original. Em 28/09/2026 isso aconteceu com todos os 40 atos da lista.
+O coletor reconhece a versão pelo número original e não a trata como novidade. Só quando nenhum número
+bate ele recorre à identidade pelo título, e trocas em massa por esse caminho bloqueiam a publicação
+para revisão; veja [operação](DEPLOYMENT.md#lotes-bloqueados).
 
 ## Power Automate (saída)
 O fluxo existente consome `https://jarbas-martinho.github.io/buscaANS/feed.xml` com o gatilho
