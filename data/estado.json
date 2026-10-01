@@ -866,6 +866,25 @@
     ]
    },
    "original": "11961"
+  },
+  "25892": {
+   "guid": "103301316456367152",
+   "titulo": "Resolução Operacional - RO ANS nº 3174, de 29 setembro 2026",
+   "ementa": "Dispõe sobre a suspensão da alienação da carteira de beneficiários da SUL DO PARÁ SAÚDE LTDA.",
+   "dou": "2026-09-30",
+   "status": "Não vigente",
+   "visto_em": "2026-09-30T21:34:43-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3174\",\"2026-09-29\",\"2026-09-30\"]",
+   "rss_guid": "urn:buscaans:ato:ad3a3d544171f62cb05460f2fec6ba382bb3c4768a252e5b7176eb252f13054f",
+   "original": "25892",
+   "identificadores": {
+    "25892": [
+     "103301316456367152"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/25892"
   }
  }
 }
