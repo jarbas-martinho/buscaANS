@@ -885,6 +885,25 @@
     ]
    },
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/25892"
+  },
+  "26765": {
+   "guid": "103301316456478960",
+   "titulo": "Resolução Operacional - RO ANS nº 3175, de 01 outubro 2026",
+   "ementa": "Dispõe sobre a suspensão da alienação da carteira de beneficiários da BRASIL ODONTO OPERADORA DE PLANOS ODONTOLÓGICOS LTDA.",
+   "dou": "2026-10-05",
+   "status": "Não vigente",
+   "visto_em": "2026-10-02T21:32:12-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3175\",\"2026-10-01\",\"2026-10-05\"]",
+   "rss_guid": "urn:buscaans:ato:547ca2607b61f037372d61bac072ae21b91bc6fdb0f64993aa834ecbe820f8a9",
+   "original": "26765",
+   "identificadores": {
+    "26765": [
+     "103301316456478960"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/26765"
   }
  }
 }
