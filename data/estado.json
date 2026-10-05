@@ -904,6 +904,25 @@
     ]
    },
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/26765"
+  },
+  "26924": {
+   "guid": "103301316456499290",
+   "titulo": "Resolução Normativa - RN ANS nº 681, de 02 outubro 2026",
+   "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a cobertura obrigatória do procedimento Colangioscopia peroral com litotripsia a laser ou eletro-hidráulica, para o tratamento de cálculos biliares complexos, em cumprimento ao disposto nos parágrafos 4º, 7º e 8º do art. 10, da Lei nº 9.656/1998.",
+   "dou": "2026-10-06",
+   "status": "Não vigente",
+   "visto_em": "2026-10-05T17:45:12-03:00",
+   "excluido": false,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao normativa rn ans\",\"681\",\"2026-10-02\",\"2026-10-06\"]",
+   "rss_guid": "urn:buscaans:ato:e490ea70a0d8c449f7a847251c7d4dbeadebee1bd3ffa9548f080782b65463ed",
+   "original": "26924",
+   "identificadores": {
+    "26924": [
+     "103301316456499290"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/26924"
   }
  }
 }
