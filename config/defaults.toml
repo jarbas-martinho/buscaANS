@@ -45,3 +45,14 @@ atraso_dou_dias = 7
 arquivo = "data/estado.json"
 # Limite de registros guardados (os mais antigos por data do DOU são descartados).
 maximo = 2000
+
+[pages]
+# Conferência da publicação do feed no GitHub Pages (python -m buscaans.pages).
+api_url = "https://api.github.com"
+# Workflow automático do Pages ("Deploy from a branch").
+workflow = "dynamic/pages/pages-build-deployment"
+branch = "main"
+# Quanto esperar a publicação após o push; o GitHub cancela uma publicação travada após 15 minutos.
+espera_minutos = 20
+intervalo_segundos = 15
+timeout_segundos = 30

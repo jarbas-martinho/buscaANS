@@ -22,6 +22,7 @@ basta trocar a URL do gatilho RSS (passo a passo em [docs/DEPLOYMENT.md](docs/DE
 4. Versões atualizadas não viram novidade: preservam a data de detecção e o GUID do RSS, e o link usa o
    número original, que o portal redireciona para a versão vigente. Lotes suspeitos param para revisão
    no Actions antes de qualquer gravação; lotes aprovados atualizam `docs/feed.xml` no GitHub Pages.
+5. A coleta confere se o GitHub Pages publicou o feed e reexecuta a publicação que falhar.
 
 ## Uso local
 ```bash

@@ -1,6 +1,6 @@
 [project]
 name = "buscaans"
-version = "1.3.0"
+version = "1.4.0"
 description = "Coletor de novas legislações da ANS que publica um feed RSS"
 license = "MIT"
 license-files = ["LICENSE"]

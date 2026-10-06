@@ -22,12 +22,13 @@ concurrency:
 
 permissions:
   contents: write   # commitar estado e feed
-  actions: write    # manter o agendamento ativo (ver último passo)
+  actions: write    # manter o agendamento ativo e reexecutar publicação do Pages que falhou
 
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Inclui a espera pela publicação do feed (config [pages] espera_minutos, padrão 20).
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
 
@@ -43,6 +44,13 @@ jobs:
       - name: Testes
         run: pytest -q
 
+      # Se a publicação anterior do Pages falhou (ex.: travou e foi cancelada), pede a reexecução.
+      - name: Conferir publicação anterior
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -m buscaans.pages verificar
+
       - name: Coletar
         env:
           REENVIAR: ${{ inputs.reenviar }}
@@ -50,6 +58,7 @@ jobs:
         run: python -m buscaans --reenviar "$REENVIAR" --aprovar-lote "$APROVAR_LOTE"
 
       - name: Commitar novidades
+        id: commit
         run: |
           if git diff --quiet -- data docs; then
             echo "Sem novidades."
@@ -61,11 +70,20 @@ jobs:
           git commit -m "Coleta: novas legislações ($(date -u +%Y-%m-%dT%H:%MZ))"
           git pull --rebase origin main
           git push
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      # Espera o Pages publicar este commit; reexecuta uma vez se falhar. Se ainda assim não publicar,
+      # a execução falha para o GitHub avisar por e-mail.
+      - name: Confirmar publicação do feed
+        if: steps.commit.outputs.sha != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -m buscaans.pages aguardar --sha "${{ steps.commit.outputs.sha }}"
 
       # O GitHub desativa agendamentos de repositórios públicos após 60 dias sem atividade.
       # Reativar o próprio workflow a cada execução zera essa contagem.
       - name: Manter agendamento ativo
-        if: github.event_name == 'schedule'
+        if: ${{ !cancelled() && github.event_name == 'schedule' }}
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}

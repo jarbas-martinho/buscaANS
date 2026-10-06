@@ -50,9 +50,28 @@ A data do DOU fica no início da descrição.
 ## Operação
 - Execução manual: aba Actions > "Coletar legislações da ANS" > Run workflow, ou `gh workflow run coletar.yml`.
 - Falhas: aparecem no Actions; notificações dependem das preferências do GitHub. O feed anterior permanece publicado.
+- Publicação do feed: ver [Publicação no GitHub Pages](#publicação-no-github-pages).
 - Não apague o estado para resolver uma troca de identificadores: isso perde o histórico de reconhecimento.
 - Reenviar um ato: Run workflow com "reenviar" = Autonumber antigo ou atual conhecido. A norma precisa
   estar entre os 40 atos lidos. O histórico de IDs é preservado; o reenvio solicitado muda a data do RSS.
+
+## Publicação no GitHub Pages
+
+O Pages publica `docs/` em um workflow automático do GitHub (`pages-build-deployment`), separado da
+coleta. Se ele falhar, o feed no ar fica desatualizado, e o GitHub não avisa ninguém (a execução é
+atribuída ao robô do Pages). Por isso a coleta confere a publicação com `python -m buscaans.pages`:
+
+| Passo do workflow | O que faz |
+|---|---|
+| Conferir publicação anterior | Se a publicação mais recente da `main` falhou ou foi cancelada, pede a reexecução. Não interrompe a coleta |
+| Confirmar publicação do feed | Só quando houve push: espera a publicação do commit, reexecuta uma vez se falhar e faz a coleta falhar se ainda assim não publicar |
+
+Parâmetros em `config/defaults.toml`, seção `[pages]`: espera (`espera_minutos`, padrão 20, acima dos
+15 minutos após os quais o GitHub cancela uma publicação travada), intervalo de consulta e workflow.
+
+Correção manual, se preciso: Actions > `pages-build-deployment` > execução com falha > "Re-run failed jobs",
+ou `gh run rerun <id> --failed`. Se a data do item no feed ficou anterior à última leitura do Power
+Automate, use o reenvio (ver Operação) para o gatilho não ignorá-lo.
 
 ## Lotes bloqueados
 
