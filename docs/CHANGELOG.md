@@ -1,5 +1,11 @@
 # Histórico de versões
 
+## 1.4.0 (2026-10-06)
+- Proteção da publicação no GitHub Pages (`python -m buscaans.pages`). Em 05/10 a publicação da RN 681 travou e foi cancelada pelo GitHub após 15 minutos; o feed ficou desatualizado sem aviso.
+- Após cada push, a coleta espera a publicação do commit (até 20 minutos) e reexecuta uma vez a que falhar. Se ainda assim não publicar, a execução falha e o GitHub avisa por e-mail.
+- No início de cada coleta, reexecuta a publicação mais recente se ela tiver falhado.
+- Tempo máximo do job de coleta: de 10 para 30 minutos. Sem nova permissão: a reexecução usa `actions: write`.
+
 ## 1.3.0 (2026-09-29)
 - Causa do incidente de 28/09 confirmada: a ANS publica **versões atualizadas** dos atos, com `Autonumber` e guid novos e o campo `AutonumberOriginal` apontando para o ato original.
 - Reconhecimento pela ordem guid, número da versão, `AutonumberOriginal` e, só por último, identidade pelo título. Versão confirmada pelo número original atualiza título, ementa, DOU, situação e link sem republicar, sem exigir revisão e sem contar como troca no limite de proteção.

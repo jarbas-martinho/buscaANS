@@ -26,6 +26,15 @@ O coletor reconhece a versão pelo número original e não a trata como novidade
 bate ele recorre à identidade pelo título, e trocas em massa por esse caminho bloqueiam a publicação
 para revisão; veja [operação](DEPLOYMENT.md#lotes-bloqueados).
 
+## GitHub (publicação do feed)
+`python -m buscaans.pages` usa a API REST do GitHub com o token do próprio workflow (`GH_TOKEN`):
+
+| Requisição | Uso |
+|---|---|
+| `GET /repos/{repo}/actions/workflows` | Achar o workflow `dynamic/pages/pages-build-deployment` |
+| `GET /repos/{repo}/actions/workflows/{id}/runs?branch=main` | Situação das publicações (`status`, `conclusion`, `head_sha`, `run_attempt`) |
+| `POST /repos/{repo}/actions/runs/{id}/rerun-failed-jobs` | Reexecutar a publicação que falhou |
+
 ## Power Automate (saída)
 O fluxo existente consome `https://jarbas-martinho.github.io/buscaANS/feed.xml` com o gatilho
 "Quando um item de feed é publicado" (`shared_rss`, `OnNewFeed`, `sinceProperty: PublishDate`).

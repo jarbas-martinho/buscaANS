@@ -22,6 +22,7 @@ Power Automate: gatilho RSS ──────┘──> Criar item em lista Sha
 | `identidade.py` | Identidade da norma, comparação conservadora de ementas e GUID RSS estável |
 | `protecao.py` | Limites de publicação, resumo de revisão e aprovação vinculada ao lote |
 | `feed.py` | RSS 2.0 com a biblioteca padrão |
+| `pages.py` | Confere a publicação do feed no GitHub Pages e reexecuta a que falhar |
 | `__main__.py` | Orquestração e registro em log |
 
 ## Decisões
@@ -59,4 +60,8 @@ Power Automate: gatilho RSS ──────┘──> Criar item em lista Sha
   a aprovação; não há desativação persistente da proteção. Conflitos de conteúdo não são liberados por código.
 - **Frequência de três execuções diárias.** A ANS publica poucos atos por semana; mais frequência não traz ganho e aumenta a carga no portal.
 - **Leitura dos N mais recentes, sem paginação por deslocamento**, porque inserções deslocam as páginas.
+- **Publicação conferida pela coleta.** O Pages publica em workflow próprio, que pode falhar sem aviso
+  (05/10/2026: travou e foi cancelado). A coleta espera a publicação do commit, reexecuta uma vez e falha
+  visivelmente se não publicar; no início de cada coleta, corrige falha anterior. Reexecutar a mesma
+  publicação usa a permissão `actions: write` já existente, sem exigir `pages: write`.
 - **Arquivos só são regravados quando o conteúdo muda** (`lastBuildDate` = última novidade), evitando commits vazios.
