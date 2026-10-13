@@ -923,6 +923,82 @@
     ]
    },
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/26924"
+  },
+  "28426": {
+   "guid": "103301316456691506",
+   "titulo": "Resolução Operacional - RO ANS nº 3176, de 09 outubro 2026",
+   "ementa": "Dispõe sobre a instauração de regime de direção fiscal na operadora SÃO FRANCISCO ASSISTÊNCIA MÉDICA LTDA.",
+   "dou": "2026-10-13",
+   "status": "Vigente",
+   "visto_em": "2026-10-13T16:19:34-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3176\",\"2026-10-09\",\"2026-10-13\"]",
+   "rss_guid": "urn:buscaans:ato:14281c21d0b73f1b8e2457b71a9e099f7cf1e7fdd3a03e26e16ce82543e68991",
+   "original": "28426",
+   "identificadores": {
+    "28426": [
+     "103301316456691506"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/28426"
+  },
+  "28427": {
+   "guid": "103301316456691651",
+   "titulo": "Resolução Operacional - RO ANS nº 3177, de 09 outubro 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora AMPLITUDE PLANOS DE SAUDE LTDA.",
+   "dou": "2026-10-14",
+   "status": "Não vigente",
+   "visto_em": "2026-10-13T16:19:34-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3177\",\"2026-10-09\",\"2026-10-14\"]",
+   "rss_guid": "urn:buscaans:ato:f27893f69758469dbac0de414d857da7a00340490c20ea0f9767597927f0284b",
+   "original": "28427",
+   "identificadores": {
+    "28427": [
+     "103301316456691651"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/28427"
+  },
+  "28428": {
+   "guid": "103301316456691734",
+   "titulo": "Resolução Operacional - RO ANS nº 3178, de 09 outubro 2026",
+   "ementa": "Dispõe sobre a determinação da alienação da carteira da operadora NOVA SAÚDE OPERADORA INTEGRADA DE SAÚDE LTDA .",
+   "dou": "2026-10-14",
+   "status": "Não vigente",
+   "visto_em": "2026-10-13T16:19:34-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3178\",\"2026-10-09\",\"2026-10-14\"]",
+   "rss_guid": "urn:buscaans:ato:e4587fadf205bc1fcfe07f8c1fab4fd8363f050ec9d047b734e79f38725d6ce0",
+   "original": "28428",
+   "identificadores": {
+    "28428": [
+     "103301316456691734"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/28428"
+  },
+  "28429": {
+   "guid": "103301316456691918",
+   "titulo": "Resolução Operacional - RO ANS nº 3179, de 09 outubro 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora SAÚDE BRASIL ASSISTÊNCIA MÉDICA LTDA .",
+   "dou": "2026-10-14",
+   "status": "Não vigente",
+   "visto_em": "2026-10-13T16:19:34-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3179\",\"2026-10-09\",\"2026-10-14\"]",
+   "rss_guid": "urn:buscaans:ato:6feeab5f2f4a303073cbfadadf0c35adda1a27af2fe9b92cec94244cf935acf5",
+   "original": "28429",
+   "identificadores": {
+    "28429": [
+     "103301316456691918"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/28429"
   }
  }
 }
