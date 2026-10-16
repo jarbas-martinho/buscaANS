@@ -999,6 +999,25 @@
     ]
    },
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/28429"
+  },
+  "30158": {
+   "guid": "103301316456983421",
+   "titulo": "Resolução Normativa - RN ANS nº 682, de 15 outubro 2026",
+   "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a cobertura obrigatória do procedimento broncoscopia com criobiópsia transbrônquica para pacientes com suspeita de doença pulmonar intersticial, em cumprimento ao disposto nos parágrafos 4º, 7º e 8º do art. 10, da Lei nº 9.656/1998.",
+   "dou": "2026-10-19",
+   "status": "Não vigente",
+   "visto_em": "2026-10-16T20:38:24-03:00",
+   "excluido": false,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao normativa rn ans\",\"682\",\"2026-10-15\",\"2026-10-19\"]",
+   "rss_guid": "urn:buscaans:ato:7c1e2c7d93eccd3787fd1e49e2eabe51c09d01e2e61d834afb708ee6f9574b7d",
+   "original": "30158",
+   "identificadores": {
+    "30158": [
+     "103301316456983421"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/30158"
   }
  }
 }
