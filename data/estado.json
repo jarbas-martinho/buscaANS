@@ -1018,6 +1018,25 @@
     ]
    },
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/30158"
+  },
+  "30549": {
+   "guid": "103301316457033465",
+   "titulo": "Resolução Regimental  - RR ANS nº 39, de 19 outubro 2026",
+   "ementa": "Altera a Resolução Regimental nº 21, de 26 de janeiro de 26 de janeiro de 2022 (Regimento Interno da Agência Nacional de Saúde Suplementar – ANS), na parte referente à Diretoria de Normas e Habilitação das Operadoras - DIOPE.",
+   "dou": "2026-10-20",
+   "status": "Não vigente",
+   "visto_em": "2026-10-19T21:23:44-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao regimental rr ans\",\"39\",\"2026-10-19\",\"2026-10-20\"]",
+   "rss_guid": "urn:buscaans:ato:d4e0719986154a2c0ca0727577761c450fec0be112eb3c0bdc46d50f864acb71",
+   "original": "30549",
+   "identificadores": {
+    "30549": [
+     "103301316457033465"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/30549"
   }
  }
 }
