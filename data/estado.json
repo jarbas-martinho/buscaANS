@@ -910,7 +910,7 @@
    "titulo": "Resolução Normativa - RN ANS nº 681, de 02 outubro 2026",
    "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a cobertura obrigatória do procedimento Colangioscopia peroral com litotripsia a laser ou eletro-hidráulica, para o tratamento de cálculos biliares complexos, em cumprimento ao disposto nos parágrafos 4º, 7º e 8º do art. 10, da Lei nº 9.656/1998.",
    "dou": "2026-10-06",
-   "status": "Não vigente",
+   "status": "Vigente",
    "visto_em": "2026-10-06T08:19:35-03:00",
    "excluido": false,
    "pre_existente": false,
@@ -1005,7 +1005,7 @@
    "titulo": "Resolução Normativa - RN ANS nº 682, de 15 outubro 2026",
    "ementa": "Altera a Resolução Normativa - RN nº 465, de 24 de fevereiro de 2021, que dispõe sobre o Rol de Procedimentos e Eventos em Saúde no âmbito da Saúde Suplementar, para regulamentar a cobertura obrigatória do procedimento broncoscopia com criobiópsia transbrônquica para pacientes com suspeita de doença pulmonar intersticial, em cumprimento ao disposto nos parágrafos 4º, 7º e 8º do art. 10, da Lei nº 9.656/1998.",
    "dou": "2026-10-19",
-   "status": "Não vigente",
+   "status": "Vigente",
    "visto_em": "2026-10-16T20:38:24-03:00",
    "excluido": false,
    "pre_existente": false,
@@ -1037,6 +1037,25 @@
     ]
    },
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/30549"
+  },
+  "34469": {
+   "guid": "103301316457593271",
+   "titulo": "Resolução Operacional - RO ANS nº 3180, de 29 outubro 2026",
+   "ementa": "Dispõe sobre a suspensão da alienação da carteira da INTEGRA ASSISTENCIA MEDICA S.A.",
+   "dou": "2026-11-03",
+   "status": "Vigente",
+   "visto_em": "2026-11-03T16:31:00-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3180\",\"2026-10-29\",\"2026-11-03\"]",
+   "rss_guid": "urn:buscaans:ato:b7e1c458b91ed627626890b7893fb1b7d84de8c4fdf5708c6aecfa6000c358e1",
+   "original": "34469",
+   "identificadores": {
+    "34469": [
+     "103301316457593271"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/34469"
   }
  }
 }
