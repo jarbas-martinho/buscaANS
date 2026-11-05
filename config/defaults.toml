@@ -52,7 +52,8 @@ api_url = "https://api.github.com"
 # Workflow automático do Pages ("Deploy from a branch").
 workflow = "dynamic/pages/pages-build-deployment"
 branch = "main"
-# Quanto esperar a publicação após o push; o GitHub cancela uma publicação travada após 15 minutos.
+# Quanto esperar cada tentativa de publicação (a reexecução ganha prazo novo); o GitHub encerra
+# uma publicação travada após 10 a 15 minutos. Duas tentativas devem caber no timeout-minutes do job.
 espera_minutos = 20
 intervalo_segundos = 15
 timeout_segundos = 30

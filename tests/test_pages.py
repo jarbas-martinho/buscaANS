@@ -93,3 +93,15 @@ def test_prazo_esgotado_encerra_com_erro():
     gh = GitHubFalso([execucao(5, None, status="in_progress")])
     ok, decorrido = esperar(gh, espera_s=60)
     assert ok is False and decorrido == 60
+
+
+def test_reexecucao_ganha_prazo_proprio():
+    # Caso real de 05/11: cada tentativa travou ~11 min até o tempo limite da publicação.
+    # Com um prazo único de 20 min, a coleta desistia antes de a reexecução terminar.
+    def andamento(tentativa):
+        return [execucao(5, None, status="in_progress", tentativa=tentativa)]
+
+    gh = GitHubFalso(*[andamento(1)] * 44, [execucao(5, "failure")],
+                     *[andamento(2)] * 44, [execucao(5, "success", tentativa=2)])
+    ok, decorrido = esperar(gh)
+    assert ok and gh.reexecutadas == [5] and decorrido > 20 * 60

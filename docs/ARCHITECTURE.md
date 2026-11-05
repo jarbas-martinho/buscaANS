@@ -61,7 +61,9 @@ Power Automate: gatilho RSS ──────┘──> Criar item em lista Sha
 - **Frequência de três execuções diárias.** A ANS publica poucos atos por semana; mais frequência não traz ganho e aumenta a carga no portal.
 - **Leitura dos N mais recentes, sem paginação por deslocamento**, porque inserções deslocam as páginas.
 - **Publicação conferida pela coleta.** O Pages publica em workflow próprio, que pode falhar sem aviso
-  (05/10/2026: travou e foi cancelado). A coleta espera a publicação do commit, reexecuta uma vez e falha
-  visivelmente se não publicar; no início de cada coleta, corrige falha anterior. Reexecutar a mesma
+  (05/10/2026: travou e foi cancelado). Quando o feed muda, a coleta espera a publicação do commit,
+  reexecuta uma vez (com prazo próprio) e falha visivelmente se não publicar; no início de cada coleta,
+  corrige falha anterior. Commits só de estado não esperam: o Power Automate lê apenas o feed, e esperar
+  por eles gerava alarme falso (05/11/2026). Reexecutar a mesma
   publicação usa a permissão `actions: write` já existente, sem exigir `pages: write`.
 - **Arquivos só são regravados quando o conteúdo muda** (`lastBuildDate` = última novidade), evitando commits vazios.

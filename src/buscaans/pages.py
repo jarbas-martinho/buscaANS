@@ -78,7 +78,11 @@ def verificar(gh) -> bool:
 
 def aguardar(gh, sha: str, espera_s: float, intervalo_s: float,
              dormir=time.sleep, relogio=time.monotonic) -> bool:
-    """Espera a publicação do commit; reexecuta uma vez se falhar. True se publicou."""
+    """Espera a publicação do commit; reexecuta uma vez se falhar. True se publicou.
+
+    `espera_s` vale por tentativa: a reexecução ganha um prazo novo, porque uma publicação
+    travada só é encerrada pelo GitHub depois de 10 a 15 minutos.
+    """
     prazo = relogio() + espera_s
     tentativa_reexecutada = None
     while True:
@@ -96,8 +100,10 @@ def aguardar(gh, sha: str, espera_s: float, intervalo_s: float,
                             sha[:7], execucao["conclusion"])
                 gh.reexecutar(execucao["id"])
                 tentativa_reexecutada = execucao["run_attempt"]
+                prazo = relogio() + espera_s
         if relogio() >= prazo:
-            log.error("Publicação do commit %s não concluiu em %.0f minutos", sha[:7], espera_s / 60)
+            log.error("Publicação do commit %s não concluiu em %.0f minutos (%s)", sha[:7], espera_s / 60,
+                      "reexecução" if tentativa_reexecutada is not None else "primeira tentativa")
             return False
         dormir(intervalo_s)
 
