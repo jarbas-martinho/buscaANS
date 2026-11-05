@@ -1056,6 +1056,177 @@
     ]
    },
    "link": "https://componentes-portal.ans.gov.br/link/legislacao/34469"
+  },
+  "34790": {
+   "guid": "103301316457634348",
+   "titulo": "Resolução Operacional - RO ANS nº 3182, de 03 novembro 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora ASSOCIAÇÃO ASSISTENCIAL DE SAÚDE SUPLEMENTAR CRUZ AZUL SAÚDE.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3182\",\"2026-11-03\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:5d53816eeb8549976dbc647ddcbceef688b3e32aef2da435d18458c24413da55",
+   "original": "34790",
+   "identificadores": {
+    "34790": [
+     "103301316457634348"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/34790"
+  },
+  "34791": {
+   "guid": "103301316457634530",
+   "titulo": "Resolução Operacional - RO ANS nº 3183, de 04 novembro 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora OPERADORA UNICENTRAL DE PLANOS DE SAÚDE LTDA.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3183\",\"2026-11-04\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:b93b0ace0f8db3813d4d1eaf51a1637ec52c3a2c562ef3501789632fb38e2d8f",
+   "original": "34791",
+   "identificadores": {
+    "34791": [
+     "103301316457634530"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/34791"
+  },
+  "34792": {
+   "guid": "103301316457634578",
+   "titulo": "Resolução Operacional - RO ANS nº 3184, de 04 novembro 2026",
+   "ementa": "Dispõe sobre o encerramento do regime especial de direção técnica na operadora UNIMED MARANHÃO DO SUL - COOPERATIVA DE TRABALHO MÉDICO.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3184\",\"2026-11-04\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:85450c4b385a5b6fc61d574cc9cb57eac3454e811f64945a95befef8a1079242",
+   "original": "34792",
+   "identificadores": {
+    "34792": [
+     "103301316457634578"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/34792"
+  },
+  "34793": {
+   "guid": "103301316457634722",
+   "titulo": "Resolução Operacional - RO ANS nº 3185, de 04 novembro 2026",
+   "ementa": "Dispõe sobre a retificação do termo legal da liquidação extrajudicial da HALSA OPERADORA DE MEDICINA DE GRUPO LTDA.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3185\",\"2026-11-04\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:35656b9e704ac46ab8e18c6fc19d9c7589bb0dcc90eba79aee74e0c561afd598",
+   "original": "34793",
+   "identificadores": {
+    "34793": [
+     "103301316457634722"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/34793"
+  },
+  "35670": {
+   "guid": "103301316457809865",
+   "titulo": "Resolução Operacional - RO ANS nº 3186, de 04 novembro 2026",
+   "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da operadora ATÍVIA SERVIÇOS DE SAÚDE S/A, Registro ANS nº 32.051-0.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3186\",\"2026-11-04\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:b8a339db39d387f0588a0ddb5a5a0ea457fe087f74a3e2b94ffd6cda4cc73cdf",
+   "original": "35670",
+   "identificadores": {
+    "35670": [
+     "103301316457809865"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/35670"
+  },
+  "35671": {
+   "guid": "103301316457809980",
+   "titulo": "Resolução Operacional - RO ANS nº 3187, de 04 novembro 2026",
+   "ementa": "Dispõe sobre a concessão da portabilidade especial de carências aos beneficiários da operadora CEAM BRASIL - PLANOS DE SAÚDE LTDA, Registro ANS nº 31.147-2.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3187\",\"2026-11-04\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:89b1e7f2cae867c2136ffeca53695fc4715e96a3835340a41f516266d686ba4b",
+   "original": "35671",
+   "identificadores": {
+    "35671": [
+     "103301316457809980"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/35671"
+  },
+  "35672": {
+   "guid": "103301316457810056",
+   "titulo": "Resolução Operacional - RO ANS nº 3188, de 04 novembro 2026",
+   "ementa": "Dispõe sobre a comercialização de planos ou produtos da operadora VALE PLANOS DE SAÚDE LTDA.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3188\",\"2026-11-04\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:678b0a59a16d9411a68e1f2ffe1a396aeefe3c0e4452de06c29935cb50d76aa5",
+   "original": "35672",
+   "identificadores": {
+    "35672": [
+     "103301316457810056"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/35672"
+  },
+  "35681": {
+   "guid": "103301316457811242",
+   "titulo": "Resolução Operacional - RO ANS nº 3189, de 04 novembro 2026",
+   "ementa": "Dispõe sobre a instauração do regime de direção fiscal na operadora ASSOCIAÇÃO ASSISTENCIAL DE SAÚDE SUPLEMENTAR CRUZ AZUL SAÚDE.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3189\",\"2026-11-04\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:689e94967d3b50ab5822d6f4d58071083a246ad1741205995cdc9fa99a324995",
+   "original": "35681",
+   "identificadores": {
+    "35681": [
+     "103301316457811242"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/35681"
+  },
+  "35682": {
+   "guid": "103301316457811428",
+   "titulo": "Resolução Operacional - RO ANS nº 3181, de 04 novembro 2026",
+   "ementa": "Dispõe sobre a instauração do regime especial de Direção Técnica na operadora SANTA CASA DE MAUÁ SAÚDE.",
+   "dou": "2026-11-05",
+   "status": "Vigente",
+   "visto_em": "2026-11-05T16:59:40-03:00",
+   "excluido": true,
+   "pre_existente": false,
+   "identidade": "[\"ato-v1\",\"resolucao operacional ro ans\",\"3181\",\"2026-11-04\",\"2026-11-05\"]",
+   "rss_guid": "urn:buscaans:ato:d5940c0eaa4d82c289d17b02c7461b4a412e2dfa91e3b407a0c8f3e9a379ae60",
+   "original": "35682",
+   "identificadores": {
+    "35682": [
+     "103301316457811428"
+    ]
+   },
+   "link": "https://componentes-portal.ans.gov.br/link/legislacao/35682"
   }
  }
 }
