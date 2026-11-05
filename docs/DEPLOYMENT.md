@@ -31,7 +31,8 @@ Para usar no Actions, definir em Settings > Secrets and variables > Actions > Va
 ## Trocar a origem no Power Automate
 Os atos da semeadura ficam fora do feed. Após a conciliação do incidente de 28/09/2026, o feed
 contém apenas a RN 680, que estava pendente no fluxo antigo, com a data preservada de
-23/09/2026 17:16:45 -0300. Seu link atual termina em 25522; seu GUID RSS legado termina em 23651.
+23/09/2026 17:16:45 -0300. Desde a 1.3.0 o link usa o número original (`/23651`, que redireciona para a
+versão vigente); o GUID RSS legado também termina em 23651.
 Novidades posteriores à conciliação podem acrescentar outros itens.
 
 1. Abrir o fluxo de coleta.
@@ -64,10 +65,11 @@ atribuída ao robô do Pages). Por isso a coleta confere a publicação com `pyt
 | Passo do workflow | O que faz |
 |---|---|
 | Conferir publicação anterior | Se a publicação mais recente da `main` falhou ou foi cancelada, pede a reexecução. Não interrompe a coleta |
-| Confirmar publicação do feed | Só quando houve push: espera a publicação do commit, reexecuta uma vez se falhar e faz a coleta falhar se ainda assim não publicar |
+| Confirmar publicação do feed | Só quando o feed (`docs/`) mudou: espera a publicação do commit, reexecuta uma vez se falhar e faz a coleta falhar se ainda assim não publicar. Coletas que mudam só `data/estado.json` não esperam |
 
-Parâmetros em `config/defaults.toml`, seção `[pages]`: espera (`espera_minutos`, padrão 20, acima dos
-15 minutos após os quais o GitHub cancela uma publicação travada), intervalo de consulta e workflow.
+Parâmetros em `config/defaults.toml`, seção `[pages]`: espera por tentativa (`espera_minutos`, padrão 20,
+acima dos 10 a 15 minutos após os quais o GitHub encerra uma publicação travada; a reexecução ganha prazo
+novo), intervalo de consulta e workflow. O `timeout-minutes` do job (50) precisa comportar duas esperas.
 
 Correção manual, se preciso: Actions > `pages-build-deployment` > execução com falha > "Re-run failed jobs",
 ou `gh run rerun <id> --failed`. Se a data do item no feed ficou anterior à última leitura do Power

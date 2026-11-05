@@ -1,5 +1,11 @@
 # Histórico de versões
 
+## 1.4.1 (2026-11-05)
+- Em 05/11 a publicação do Pages travou duas vezes (cada tentativa encerrada pelo GitHub após cerca de 10 minutos) e a coleta terminou com erro, embora o feed não tivesse mudado: o commit trazia só Resoluções Operacionais, que ficam fora do feed. Nada deixou de ser entregue.
+- A coleta só espera a publicação quando o feed (`docs/`) muda. Coletas que alteram apenas `data/estado.json` não dependem mais do Pages; uma falha nessa publicação é reexecutada pela próxima coleta.
+- A reexecução ganha prazo próprio (`espera_minutos` passa a valer por tentativa). Antes, o prazo único de 20 minutos acabava antes de a reexecução terminar.
+- Tempo máximo do job de coleta: de 30 para 50 minutos, para caberem duas tentativas.
+
 ## 1.4.0 (2026-10-06)
 - Proteção da publicação no GitHub Pages (`python -m buscaans.pages`). Em 05/10 a publicação da RN 681 travou e foi cancelada pelo GitHub após 15 minutos; o feed ficou desatualizado sem aviso.
 - Após cada push, a coleta espera a publicação do commit (até 20 minutos) e reexecuta uma vez a que falhar. Se ainda assim não publicar, a execução falha e o GitHub avisa por e-mail.

@@ -27,8 +27,8 @@ permissions:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    # Inclui a espera pela publicação do feed (config [pages] espera_minutos, padrão 20).
-    timeout-minutes: 30
+    # Inclui a espera pela publicação do feed: até duas tentativas de [pages] espera_minutos (padrão 20).
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v5
 
@@ -64,6 +64,9 @@ jobs:
             echo "Sem novidades."
             exit 0
           fi
+          # Só o feed (docs/) interessa ao Power Automate; coletas que mudam apenas o estado
+          # (por exemplo, atos de tipos excluídos) não precisam esperar a publicação.
+          if git diff --quiet -- docs; then feed=nao; else feed=sim; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data docs
@@ -71,11 +74,12 @@ jobs:
           git pull --rebase origin main
           git push
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "feed=$feed" >> "$GITHUB_OUTPUT"
 
-      # Espera o Pages publicar este commit; reexecuta uma vez se falhar. Se ainda assim não publicar,
-      # a execução falha para o GitHub avisar por e-mail.
+      # Espera o Pages publicar este commit quando o feed mudou; reexecuta uma vez se falhar. Se ainda
+      # assim não publicar, a execução falha para o GitHub avisar por e-mail.
       - name: Confirmar publicação do feed
-        if: steps.commit.outputs.sha != ''
+        if: steps.commit.outputs.feed == 'sim'
         env:
           GH_TOKEN: ${{ github.token }}
         run: python -m buscaans.pages aguardar --sha "${{ steps.commit.outputs.sha }}"
